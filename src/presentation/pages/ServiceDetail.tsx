@@ -32,7 +32,7 @@ export default function ServiceDetail() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-204.75 flex items-center overflow-hidden">
+      <section className="relative min-h-[70vh] lg:h-204.75 flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={displayService.heroImage ?? displayService.image}
@@ -42,7 +42,7 @@ export default function ServiceDetail() {
           />
           <div className="absolute inset-0 bg-linear-to-r from-primary/80 via-primary/40 to-transparent" />
         </div>
-        <div className="max-w-7xl mx-auto px-8 relative z-10 w-full">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ export default function ServiceDetail() {
             <p className="text-lg text-blue-50 max-w-lg mb-8 font-body leading-relaxed">
               {displayService.longDescription ?? displayService.description}
             </p>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4">
               <Link
                 to="/booking"
                 className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-primary-fixed transition-colors"
@@ -80,9 +80,9 @@ export default function ServiceDetail() {
 
       {/* Benefits Section - Asymmetric Bento Grid */}
       {displayService.benefits && displayService.benefits.length > 0 && (
-        <section className="py-24 bg-surface">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="mb-16">
+        <section className="py-16 md:py-24 bg-surface">
+          <div className="max-w-7xl mx-auto px-4 md:px-8">
+            <div className="mb-10 md:mb-16">
               <h2 className="font-headline text-4xl text-primary mb-4">
                 {t("serviceDetail.benefitsTitle")}
               </h2>
@@ -181,9 +181,9 @@ export default function ServiceDetail() {
       {/* Treatment Process */}
       {displayService.processSteps &&
         displayService.processSteps.length > 0 && (
-          <section className="py-24 bg-surface-container-low">
-            <div className="max-w-7xl mx-auto px-8">
-              <div className="text-center mb-20">
+          <section className="py-16 md:py-24 bg-surface-container-low">
+            <div className="max-w-7xl mx-auto px-4 md:px-8">
+              <div className="text-center mb-12 md:mb-20">
                 <h2 className="font-headline text-4xl text-primary mb-4">
                   {t("serviceDetail.processTitle")}
                 </h2>
@@ -222,8 +222,8 @@ export default function ServiceDetail() {
 
       {/* Specialist Highlight */}
       {displayService.specialist && (
-        <section className="py-24 bg-surface">
-          <div className="max-w-7xl mx-auto px-8">
+        <section className="py-16 md:py-24 bg-surface">
+          <div className="max-w-7xl mx-auto px-4 md:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -238,7 +238,7 @@ export default function ServiceDetail() {
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <div className="w-full md:w-1/2 p-12">
+              <div className="w-full md:w-1/2 p-6 md:p-12">
                 <span className="text-primary font-label font-bold tracking-widest uppercase text-xs mb-2 block">
                   {t("serviceDetail.specialistBadge")}
                 </span>
@@ -267,8 +267,8 @@ export default function ServiceDetail() {
 
       {/* FAQ/Safety */}
       {displayService.faqs && displayService.faqs.length > 0 && (
-        <section className="py-24 bg-surface-container-high/30">
-          <div className="max-w-4xl mx-auto px-8">
+        <section className="py-16 md:py-24 bg-surface-container-high/30">
+          <div className="max-w-4xl mx-auto px-4 md:px-8">
             <h2 className="font-headline text-3xl text-primary text-center mb-12">
               {t("serviceDetail.faqTitle")}
             </h2>

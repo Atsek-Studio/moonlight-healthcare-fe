@@ -12,7 +12,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-slate-50 border-t border-slate-100 mt-20">
-      <div className="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-10 md:py-16 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
         <div className="col-span-1">
           <Link
             to="/"
@@ -130,7 +130,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-8 py-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-6 md:py-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
         <span className="text-xs text-slate-400">{t("footer.copyright")}</span>
         <div className="flex gap-8">
           <Link

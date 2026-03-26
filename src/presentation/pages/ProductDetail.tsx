@@ -20,9 +20,9 @@ export default function ProductDetail() {
   const { t } = useTranslation();
 
   return (
-    <main className="max-w-7xl mx-auto px-8 pt-32 pb-24">
+    <main className="max-w-7xl mx-auto px-4 md:px-8 pt-24 md:pt-32 pb-16 md:pb-24">
       {/* Breadcrumb */}
-      <nav className="flex items-center gap-2 mb-12 text-slate-500 font-label text-xs uppercase tracking-widest">
+      <nav className="flex items-center gap-2 mb-8 md:mb-12 text-slate-500 font-label text-xs uppercase tracking-widest">
         <Link to="/" className="hover:text-primary transition-colors">
           {t("productDetail.home")}
         </Link>
@@ -37,7 +37,7 @@ export default function ProductDetail() {
       </nav>
 
       {/* Product Hero Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 mb-16 md:mb-24">
         {/* Left: Visual Narrative */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}

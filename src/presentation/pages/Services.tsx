@@ -15,9 +15,9 @@ export default function Services() {
   const { t } = useTranslation();
 
   return (
-    <div className="pt-32 pb-20">
+    <div className="pt-24 md:pt-32 pb-20">
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-8 mb-24 text-center">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 mb-12 md:mb-24 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -39,8 +39,8 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="max-w-7xl mx-auto px-8 mb-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 mb-16 md:mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
@@ -59,7 +59,7 @@ export default function Services() {
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
-              <div className="p-10">
+              <div className="p-6 md:p-10">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-2xl bg-primary/5 flex items-center justify-center text-primary">
                     {service.icon === "architecture" ? (
@@ -107,9 +107,9 @@ export default function Services() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="bg-primary py-32 text-on-primary overflow-hidden relative">
-        <div className="max-w-7xl mx-auto px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <section className="bg-primary py-16 md:py-32 text-on-primary overflow-hidden relative">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
             <div>
               <h2 className="font-headline text-4xl md:text-5xl mb-8 leading-tight">
                 {t("services.whyChooseTitle")} <br />
@@ -117,7 +117,7 @@ export default function Services() {
                   {t("services.whyChooseSubtitle")}
                 </span>
               </h2>
-              <div className="space-y-12">
+              <div className="space-y-8 md:space-y-12">
                 <div className="flex gap-6">
                   <div className="w-14 h-14 rounded-2xl bg-white/10 shrink-0 flex items-center justify-center">
                     <Zap className="w-7 h-7" />
@@ -146,7 +146,7 @@ export default function Services() {
                 </div>
               </div>
             </div>
-            <div className="relative">
+            <div className="hidden lg:block relative">
               <div className="aspect-square rounded-full border border-white/10 p-12 animate-spin-slow">
                 <div className="w-full h-full rounded-full border border-white/20 p-12">
                   <div className="w-full h-full rounded-full bg-white/5 backdrop-blur-sm flex items-center justify-center">
@@ -166,7 +166,7 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="max-w-7xl mx-auto px-8 py-32 text-center">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-32 text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="font-headline text-4xl text-primary mb-8">
             {t("services.readyTitle")}

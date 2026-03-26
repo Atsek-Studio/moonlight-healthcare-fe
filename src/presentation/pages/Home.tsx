@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative min-h-200 flex items-center overflow-hidden bg-surface">
-        <div className="max-w-7xl mx-auto px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <section className="relative min-h-[70vh] lg:min-h-200 flex items-center overflow-hidden bg-surface">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -62,7 +62,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-linear-to-t from-primary/20 to-transparent"></div>
             </div>
 
-            <div className="absolute -bottom-8 -left-8 clinical-glass p-6 rounded-xl border border-white/30 shadow-2xl max-w-60">
+            <div className="hidden sm:block absolute -bottom-8 -left-8 clinical-glass p-6 rounded-xl border border-white/30 shadow-2xl max-w-60">
               <div className="flex items-center gap-3 mb-3">
                 <Sparkles className="w-5 h-5 text-primary fill-primary" />
                 <span className="text-xs font-label font-bold text-primary uppercase tracking-tighter">
@@ -80,10 +80,10 @@ export default function Home() {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-32 bg-surface-container-low">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
-            <div className="sticky top-32">
+      <section className="py-16 md:py-32 bg-surface-container-low">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start">
+            <div className="lg:sticky lg:top-32">
               <h2 className="font-headline text-4xl text-primary mb-6">
                 {t("home.philosophyTitle")}
               </h2>
@@ -117,7 +117,7 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="pt-12">
                 <div className="bg-surface-container-lowest p-8 rounded-2xl mb-6 shadow-sm border border-slate-100">
                   <span className="material-symbols-outlined text-4xl text-primary mb-4">
@@ -160,9 +160,9 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-32 bg-surface">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="text-center mb-20">
+      <section className="py-16 md:py-32 bg-surface">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="text-center mb-10 md:mb-20">
             <h2 className="font-headline text-4xl text-primary mb-4">
               {t("home.clinicalServices")}
             </h2>
@@ -213,9 +213,9 @@ export default function Home() {
       </section>
 
       {/* Featured Products Section */}
-      <section className="py-32 bg-surface-container-lowest">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+      <section className="py-16 md:py-32 bg-surface-container-lowest">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-16 gap-6">
             <div className="max-w-xl">
               <h2 className="font-headline text-4xl text-primary mb-4">
                 {t("home.featuredProducts")}
@@ -277,7 +277,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-8">
+      <section className="py-16 md:py-24 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-3xl overflow-hidden bg-primary p-12 md:p-20 text-center">
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">

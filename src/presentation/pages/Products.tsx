@@ -16,9 +16,9 @@ export default function Products() {
   const filteredProducts = useFilteredProducts(activeCategory, searchQuery);
 
   return (
-    <div className="pt-32 pb-20">
+    <div className="pt-24 md:pt-32 pb-20">
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-8 mb-20">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 mb-12 md:mb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -46,7 +46,7 @@ export default function Products() {
       </section>
 
       {/* Filter & Search Bar */}
-      <section className="max-w-7xl mx-auto px-8 mb-12">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 mb-12">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 border-b border-slate-100 pb-8">
           <div className="flex flex-wrap gap-4">
             {categories.map((cat) => (
@@ -77,7 +77,7 @@ export default function Products() {
       </section>
 
       {/* Product Grid */}
-      <section className="max-w-7xl mx-auto px-8 min-h-100">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 min-h-100">
         {filteredProducts.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {filteredProducts.map((product, index) => (
@@ -155,7 +155,7 @@ export default function Products() {
       </section>
 
       {/* Newsletter / CTA */}
-      <section className="max-w-7xl mx-auto px-8 mt-32">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 mt-16 md:mt-32">
         <div className="bg-surface-container-low rounded-3xl p-12 md:p-20 flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="max-w-md">
             <h2 className="font-headline text-3xl text-primary mb-4">

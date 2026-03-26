@@ -16,9 +16,9 @@ export default function Library() {
   const featuredProduct = products[0];
 
   return (
-    <div className="pt-32 pb-20 max-w-7xl mx-auto px-8">
+    <div className="pt-24 md:pt-32 pb-20 max-w-7xl mx-auto px-4 md:px-8">
       {/* Editorial Header */}
-      <header className="mb-20">
+      <header className="mb-12 md:mb-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -91,7 +91,7 @@ export default function Library() {
           </div>
 
           <div className="flex flex-col gap-8">
-            <div className="bg-surface-container-lowest p-10 rounded-xl flex-1 flex flex-col justify-center border border-slate-100 hover:border-primary/10 transition-all">
+            <div className="bg-surface-container-lowest p-6 md:p-10 rounded-xl flex-1 flex flex-col justify-center border border-slate-100 hover:border-primary/10 transition-all">
               <span className="text-primary text-xs font-label uppercase tracking-tighter mb-2">
                 {t("library.ingredients")}
               </span>
@@ -110,7 +110,7 @@ export default function Library() {
                 </div>
               </div>
             </div>
-            <div className="bg-primary p-10 rounded-xl text-on-primary">
+            <div className="bg-primary p-6 md:p-10 rounded-xl text-on-primary">
               <h3 className="font-headline text-2xl mb-4">
                 {t("library.memberPrivileges")}
               </h3>

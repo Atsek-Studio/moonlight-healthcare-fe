@@ -15,10 +15,10 @@ import { useTranslation } from "react-i18next";
 export default function About() {
   const { t } = useTranslation();
   return (
-    <div className="pt-32 pb-20">
+    <div className="pt-24 md:pt-32 pb-20">
       {/* Hero */}
-      <section className="max-w-7xl mx-auto px-8 mb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 mb-12 md:mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -77,9 +77,9 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="bg-surface-container-low py-32">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="text-center mb-20">
+      <section className="bg-surface-container-low py-16 md:py-32">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="text-center mb-12 md:mb-20">
             <h2 className="font-headline text-4xl text-primary mb-4">
               {t("about.coreValues")}
             </h2>
@@ -88,8 +88,8 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="bg-white p-10 rounded-2xl border border-slate-100 hover:shadow-lg transition-all">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            <div className="bg-white p-6 md:p-10 rounded-2xl border border-slate-100 hover:shadow-lg transition-all">
               <div className="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center mb-8">
                 <Heart className="w-6 h-6 text-primary" />
               </div>
@@ -100,7 +100,7 @@ export default function About() {
                 {t("about.dedicationDesc")}
               </p>
             </div>
-            <div className="bg-white p-10 rounded-2xl border border-slate-100 hover:shadow-lg transition-all">
+            <div className="bg-white p-6 md:p-10 rounded-2xl border border-slate-100 hover:shadow-lg transition-all">
               <div className="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center mb-8">
                 <Award className="w-6 h-6 text-primary" />
               </div>
@@ -111,7 +111,7 @@ export default function About() {
                 {t("about.qualityDesc")}
               </p>
             </div>
-            <div className="bg-white p-10 rounded-2xl border border-slate-100 hover:shadow-lg transition-all">
+            <div className="bg-white p-6 md:p-10 rounded-2xl border border-slate-100 hover:shadow-lg transition-all">
               <div className="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center mb-8">
                 <Users className="w-6 h-6 text-primary" />
               </div>
@@ -127,9 +127,9 @@ export default function About() {
       </section>
 
       {/* Philosophy Deep Dive */}
-      <section className="py-32 px-8">
+      <section className="py-16 md:py-32 px-4 md:px-8">
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20 items-center">
             <div className="order-2 md:order-1">
               <img
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm12x6KLkUKU7qnWNisXy9bpurYzCtEUR3G218eIqovXOEbVzf-93CuRp4ZEQWEXOGOTKVELzxUNH_Cy5W6whTuaYH-GEIUV1XGHa2B9zuz7bvT55f9ZcgWu7s3AhDiz_Gi4suUy124JOKFDUdwGXeM-VlDf9HVmB7i2DSw9sStC7jAHN85ebskfcfo20UZ4tTMQ-RWGs7IaQdciBocSqX--FtcsX4x9zRfZt0TlpqX_eVKU621ry401jVyGG0vNs9J5uQg2Tch7A"
@@ -166,9 +166,9 @@ export default function About() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-surface-container-low py-32">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="text-center mb-20">
+      <section id="contact" className="bg-surface-container-low py-16 md:py-32">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="text-center mb-12 md:mb-20">
             <h2 className="font-headline text-4xl text-primary mb-4">
               {t("about.contactTitle")}
             </h2>
@@ -177,7 +177,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
             {/* Contact Info */}
             <div className="lg:col-span-5 space-y-12">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
@@ -313,7 +313,7 @@ export default function About() {
       </section>
 
       {/* Map Section */}
-      <section className="max-w-7xl mx-auto px-8 mt-24">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 mt-16 md:mt-24">
         <div className="relative h-125 rounded-3xl overflow-hidden border border-slate-100 shadow-inner bg-slate-100">
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center p-8">

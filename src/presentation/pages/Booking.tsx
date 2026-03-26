@@ -52,10 +52,10 @@ export default function Booking() {
   ];
 
   return (
-    <div className="pt-32 pb-20 min-h-screen bg-surface-container-low">
-      <div className="max-w-4xl mx-auto px-8">
+    <div className="pt-24 md:pt-32 pb-20 min-h-screen bg-surface-container-low">
+      <div className="max-w-4xl mx-auto px-4 md:px-8">
         {/* Progress Header */}
-        <div className="mb-12">
+        <div className="mb-8 md:mb-12">
           <div className="flex justify-between items-center mb-4">
             <h1 className="font-headline text-3xl text-primary">
               {t("booking.title")}

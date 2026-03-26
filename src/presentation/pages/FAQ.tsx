@@ -16,9 +16,9 @@ export default function FAQ() {
   };
 
   return (
-    <div className="pt-32 pb-20 min-h-screen bg-surface-container-low">
+    <div className="pt-24 md:pt-32 pb-20 min-h-screen bg-surface-container-low">
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-8 mb-16">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 mb-10 md:mb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ export default function FAQ() {
       </section>
 
       {/* FAQ Accordion */}
-      <section className="max-w-4xl mx-auto px-8">
+      <section className="max-w-4xl mx-auto px-4 md:px-8">
         <div className="space-y-4">
           {filteredFaqs.length > 0 ? (
             filteredFaqs.map((faq, index) => (
@@ -121,7 +121,7 @@ export default function FAQ() {
       </section>
 
       {/* Still Have Questions? */}
-      <section className="max-w-4xl mx-auto px-8 mt-20">
+      <section className="max-w-4xl mx-auto px-4 md:px-8 mt-12 md:mt-20">
         <div className="bg-primary p-10 md:p-16 rounded-3xl text-on-primary text-center relative overflow-hidden shadow-xl">
           <div className="relative z-10">
             <h2 className="font-headline text-3xl mb-4">
