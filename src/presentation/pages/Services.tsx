@@ -85,13 +85,21 @@ export default function Services() {
                     <span>{t("services.gacpCertified")}</span>
                   </div>
                 </div>
-                <Link
-                  to="/booking"
-                  className="inline-flex items-center gap-2 text-primary font-bold group/link"
-                >
-                  {t("services.bookConsultation")}
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
-                </Link>
+                <div className="flex items-center gap-6">
+                  <Link
+                    to={`/service/${service.id}`}
+                    className="inline-flex items-center gap-2 text-primary font-bold group/link"
+                  >
+                    {t("services.viewDetails")}
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                  </Link>
+                  <Link
+                    to="/booking"
+                    className="inline-flex items-center gap-2 bg-primary text-on-primary px-5 py-2.5 rounded-lg text-sm font-medium hover:opacity-90 transition-all"
+                  >
+                    {t("services.bookConsultation")}
+                  </Link>
+                </div>
               </div>
             </motion.div>
           ))}

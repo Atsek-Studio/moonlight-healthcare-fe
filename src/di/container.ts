@@ -11,6 +11,7 @@ import { GetProductCategories } from "../usecases/product/GetProductCategories";
 import { GetFeaturedProducts } from "../usecases/product/GetFeaturedProducts";
 import { GetAllArticles } from "../usecases/article/GetAllArticles";
 import { GetAllServices } from "../usecases/service/GetAllServices";
+import { GetServiceById } from "../usecases/service/GetServiceById";
 import { GetAllPractitioners } from "../usecases/practitioner/GetAllPractitioners";
 import { GetAllFAQs } from "../usecases/faq/GetAllFAQs";
 import { SearchFAQs } from "../usecases/faq/SearchFAQs";
@@ -30,6 +31,7 @@ export const getProductCategories = new GetProductCategories(productRepository);
 export const getFeaturedProducts = new GetFeaturedProducts(productRepository);
 export const getAllArticles = new GetAllArticles(articleRepository);
 export const getAllServices = new GetAllServices(serviceRepository);
+export const getServiceById = new GetServiceById(serviceRepository);
 export const getAllPractitioners = new GetAllPractitioners(
   practitionerRepository,
 );

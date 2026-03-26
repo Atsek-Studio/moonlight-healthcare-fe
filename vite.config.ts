@@ -10,6 +10,18 @@ export default defineConfig(({ mode }) => {
     define: {
       "process.env.GEMINI_API_KEY": JSON.stringify(env.GEMINI_API_KEY),
     },
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            "vendor-react": ["react", "react-dom", "react-router-dom"],
+            "vendor-ui": ["motion", "lucide-react"],
+            "vendor-i18n": ["i18next", "react-i18next"],
+            "vendor-query": ["@tanstack/react-query"],
+          },
+        },
+      },
+    },
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "."),

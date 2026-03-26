@@ -13,6 +13,7 @@ export interface ArticleRepository {
 
 export interface ServiceRepository {
   getAll(): Service[];
+  getById(id: string): Service | undefined;
 }
 
 export interface PractitionerRepository {

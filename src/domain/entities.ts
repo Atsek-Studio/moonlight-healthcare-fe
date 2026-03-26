@@ -28,12 +28,43 @@ export interface Article {
   featured?: boolean;
 }
 
+export interface ServiceBenefit {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface ServiceProcessStep {
+  title: string;
+  description: string;
+}
+
+export interface ServiceSpecialist {
+  name: string;
+  role: string;
+  quote: string;
+  image: string;
+  experience: string;
+}
+
+export interface ServiceFAQ {
+  question: string;
+  answer: string;
+}
+
 export interface Service {
   id: string;
   title: string;
   description: string;
   icon: string;
   image: string;
+  subtitle?: string;
+  heroImage?: string;
+  longDescription?: string;
+  benefits?: ServiceBenefit[];
+  processSteps?: ServiceProcessStep[];
+  specialist?: ServiceSpecialist;
+  faqs?: ServiceFAQ[];
 }
 
 export interface Practitioner {

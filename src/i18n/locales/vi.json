@@ -63,6 +63,7 @@
     "personalizedPlan": "Phác đồ cá nhân hóa",
     "gacpCertified": "Dược liệu đạt chuẩn GACP-WHO",
     "bookConsultation": "Đặt lịch tư vấn",
+    "viewDetails": "Xem chi tiết",
     "whyChooseTitle": "Tại sao chọn",
     "whyChooseSubtitle": "Moon Healthcare?",
     "immediateResults": "Hiệu quả tức thì",
@@ -73,6 +74,21 @@
     "readyBody": "Đội ngũ bác sĩ của chúng tôi luôn sẵn sàng tư vấn phác đồ phù hợp nhất với thể trạng của bạn.",
     "bookNow": "Đặt lịch ngay",
     "contactConsultation": "Liên hệ tư vấn"
+  },
+  "serviceDetail": {
+    "badge": "Traditional Healing",
+    "bookNow": "Đặt lịch ngay",
+    "learnMore": "Tìm hiểu thêm",
+    "benefitsTitle": "Lợi ích sức khỏe",
+    "benefitsSubtitle": "Healing through precision and presence.",
+    "processTitle": "Quy trình điều trị",
+    "specialistBadge": "Our Specialist",
+    "clinicalExperience": "Kinh nghiệm lâm sàng chuyên sâu",
+    "faqTitle": "An toàn & Thoải mái",
+    "ctaTitle": "Khởi đầu hành trình phục hồi",
+    "ctaBody": "Hãy để chúng tôi giúp bạn tìm lại sự cân bằng vốn có. Đội ngũ chuyên gia luôn sẵn sàng đồng hành cùng sức khỏe của bạn.",
+    "ctaBookNow": "Đặt lịch hẹn ngay",
+    "ctaCall": "Gọi tư vấn: 1900 xxxx"
   },
   "products": {
     "badge": "Cửa hàng trực tuyến",

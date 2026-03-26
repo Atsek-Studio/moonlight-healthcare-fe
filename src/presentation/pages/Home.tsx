@@ -191,7 +191,7 @@ export default function Home() {
                       {service.description}
                     </p>
                     <Link
-                      to="/services"
+                      to={`/service/${service.id}`}
                       className="text-primary font-semibold text-sm flex items-center gap-2 group-hover:gap-4 transition-all"
                     >
                       {t("home.serviceDetails")}{" "}

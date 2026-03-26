@@ -8,4 +8,8 @@ export class ServiceRepositoryImpl implements ServiceRepository {
   getAll(): Service[] {
     return this.services;
   }
+
+  getById(id: string): Service | undefined {
+    return this.services.find((s) => s.id === id);
+  }
 }

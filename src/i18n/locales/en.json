@@ -63,6 +63,7 @@
     "personalizedPlan": "Personalized Treatment Plan",
     "gacpCertified": "GACP-WHO Certified Herbs",
     "bookConsultation": "Book Consultation",
+    "viewDetails": "View Details",
     "whyChooseTitle": "Why Choose",
     "whyChooseSubtitle": "Moon Healthcare?",
     "immediateResults": "Immediate Results",
@@ -73,6 +74,21 @@
     "readyBody": "Our doctors are always ready to recommend the best treatment plan for your condition.",
     "bookNow": "Book Now",
     "contactConsultation": "Contact for Consultation"
+  },
+  "serviceDetail": {
+    "badge": "Traditional Healing",
+    "bookNow": "Book Now",
+    "learnMore": "Learn More",
+    "benefitsTitle": "Health Benefits",
+    "benefitsSubtitle": "Healing through precision and presence.",
+    "processTitle": "Treatment Process",
+    "specialistBadge": "Our Specialist",
+    "clinicalExperience": "Deep clinical experience",
+    "faqTitle": "Safety & Comfort",
+    "ctaTitle": "Begin your recovery journey",
+    "ctaBody": "Let us help you find your natural balance. Our expert team is always ready to accompany your health.",
+    "ctaBookNow": "Book Appointment Now",
+    "ctaCall": "Call Consultation: 1900 xxxx"
   },
   "products": {
     "badge": "Online Store",
