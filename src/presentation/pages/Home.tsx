@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import { CheckCircle2, ArrowRight, Sparkles, ShoppingBag } from "lucide-react";
+import { Activity, ArrowRight, BookOpen, CheckCircle2, FlaskConical, ShoppingBag, Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useAllServices } from "../hooks/useServices";
 import { useFeaturedProducts } from "../hooks/useProducts";
@@ -11,7 +11,7 @@ export default function Home() {
   const featuredProducts = useFeaturedProducts(4);
 
   return (
-    <div className="pt-20">
+    <div data-page="home">
       {/* Hero Section */}
       <section className="relative min-h-[70vh] lg:min-h-200 flex items-center overflow-hidden bg-surface">
         <div className="max-w-7xl mx-auto px-4 md:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -21,12 +21,9 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-7 z-10"
           >
-            <span className="inline-block mb-6 px-4 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-label tracking-widest uppercase">
-              {t("home.badge")}
-            </span>
             <h1 className="font-headline text-5xl md:text-7xl text-primary leading-[1.1] mb-8 tracking-tight">
-              {t("home.heroTitle1")} <br />
-              <span className="italic font-normal">{t("home.heroTitle2")}</span>
+              <span>{t("home.heroTitle1")}</span>
+              <span className="block font-normal">{t("home.heroTitle2")}</span>
             </h1>
             <p className="text-xl text-secondary max-w-lg mb-12 leading-relaxed">
               {t("home.heroSubtitle")}
@@ -34,13 +31,13 @@ export default function Home() {
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/services"
-                className="bg-primary text-on-primary px-8 py-4 rounded-lg font-medium text-base hover:opacity-95 transition-all active:scale-95"
+                className="action-primary"
               >
                 {t("home.discoverTreatments")}
               </Link>
               <Link
                 to="/about"
-                className="border border-primary/20 text-primary px-8 py-4 rounded-lg font-medium text-base hover:bg-primary/5 transition-all"
+                className="action-secondary"
               >
                 {t("home.learnMore")}
               </Link>
@@ -56,13 +53,14 @@ export default function Home() {
             <div className="relative w-full aspect-4/5 rounded-2xl overflow-hidden moon-glow">
               <img
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYfnJs-GeKTVaEecHlc4urPStxRxNZpOWgvu82kgQqYSAMeylgqJzJfF6Uu1NFoB3_uTvDdoUy87efKbKa-PBkntNnXXMnGVyLMdH1YYjF1AtsHe8uMbF699NKK3-dzPj-J06prIQWJUas0_Omy7ORrHsO4OLAL7ljg_9V3YUcWEM-ieJrRYo-rbS_hOrXtrUKfmJxd5Z-86nkcwuAgQfXmJuXOMxYO6lJsi5o1rEaLlU4yk0mTIHnrmx5VrKjvXQA1hazqHHLwSM"
-                alt="Clinical Zen atmosphere"
+                alt="Moon Healthcare traditional medicine consultation room"
+                fetchPriority="high"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-linear-to-t from-primary/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-primary-container/20"></div>
             </div>
 
-            <div className="hidden sm:block absolute -bottom-8 -left-8 clinical-glass p-6 rounded-xl border border-white/30 shadow-2xl max-w-60">
+            <div className="hidden sm:block absolute -bottom-8 -left-8 clinical-glass p-6 rounded-xl border border-rule-ui max-w-60">
               <div className="flex items-center gap-3 mb-3">
                 <Sparkles className="w-5 h-5 text-primary fill-primary" />
                 <span className="text-xs font-label font-bold text-primary uppercase tracking-tighter">
@@ -76,7 +74,6 @@ export default function Home() {
           </motion.div>
         </div>
 
-        <div className="absolute top-1/4 -right-24 w-96 h-96 bg-primary-fixed-dim/20 rounded-full blur-[120px] -z-10"></div>
       </section>
 
       {/* Philosophy Section */}
@@ -120,9 +117,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="pt-12">
                 <div className="bg-surface-container-lowest p-8 rounded-2xl mb-6 shadow-sm border border-slate-100">
-                  <span className="material-symbols-outlined text-4xl text-primary mb-4">
-                    history_edu
-                  </span>
+                  <BookOpen className="mb-4 h-7 w-7 text-primary" aria-hidden="true" />
                   <h3 className="font-headline text-xl text-primary mb-3">
                     {t("home.heritage")}
                   </h3>
@@ -143,9 +138,7 @@ export default function Home() {
                   className="w-full h-64 object-cover rounded-2xl mb-6"
                 />
                 <div className="bg-primary p-8 rounded-2xl text-on-primary shadow-lg">
-                  <span className="material-symbols-outlined text-4xl mb-4">
-                    science
-                  </span>
+                  <FlaskConical className="mb-4 h-7 w-7" aria-hidden="true" />
                   <h3 className="font-headline text-xl mb-3">
                     {t("home.clinicalPrecision")}
                   </h3>
@@ -175,14 +168,12 @@ export default function Home() {
             {services.map((service) => (
               <div
                 key={service.id}
-                className="group relative overflow-hidden rounded-2xl bg-surface-container-lowest transition-all hover:shadow-xl border border-slate-100"
+                className="group relative overflow-hidden rounded-2xl bg-surface-container-lowest transition-colors border border-slate-100"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2">
                   <div className="p-10 flex flex-col justify-center">
                     <div className="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center mb-6">
-                      <span className="material-symbols-outlined text-primary">
-                        {service.icon}
-                      </span>
+                      <Activity className="h-5 w-5 text-primary" aria-hidden="true" />
                     </div>
                     <h3 className="font-headline text-2xl text-primary mb-4">
                       {service.title}
@@ -192,7 +183,7 @@ export default function Home() {
                     </p>
                     <Link
                       to={`/service/${service.id}`}
-                      className="text-primary font-semibold text-sm flex items-center gap-2 group-hover:gap-4 transition-all"
+                      className="text-primary font-semibold text-sm flex items-center gap-2 transition-colors"
                     >
                       {t("home.serviceDetails")}{" "}
                       <ArrowRight className="w-4 h-4" />
@@ -202,7 +193,7 @@ export default function Home() {
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 </div>
@@ -224,7 +215,7 @@ export default function Home() {
             </div>
             <Link
               to="/products"
-              className="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all"
+              className="text-primary font-bold flex items-center gap-2 transition-colors"
             >
               {t("home.viewAllProducts")} <ArrowRight className="w-5 h-5" />
             </Link>
@@ -234,7 +225,6 @@ export default function Home() {
             {featuredProducts.map((product) => (
               <motion.div
                 key={product.id}
-                whileHover={{ y: -10 }}
                 className="group"
               >
                 <Link to={`/product/${product.id}`} className="block">
@@ -242,11 +232,11 @@ export default function Home() {
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute top-4 right-4">
-                      <div className="w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-primary shadow-sm hover:bg-primary hover:text-white transition-all">
+                      <div className="w-10 h-10 rounded-lg bg-paper-ui flex items-center justify-center text-primary transition-colors">
                         <ShoppingBag className="w-5 h-5" />
                       </div>
                     </div>
@@ -279,11 +269,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-16 md:py-24 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="relative rounded-3xl overflow-hidden bg-primary p-12 md:p-20 text-center">
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-              <div className="absolute -top-1/2 -right-1/4 w-150 h-150 bg-white/5 rounded-full blur-3xl"></div>
-              <div className="absolute -bottom-1/2 -left-1/4 w-150 h-150 bg-white/5 rounded-full blur-3xl"></div>
-            </div>
+          <div className="relative rounded-3xl overflow-hidden bg-primary-container p-12 md:p-20 text-on-primary-container">
             <div className="relative z-10 max-w-2xl mx-auto">
               <h2 className="font-headline text-4xl md:text-5xl text-on-primary mb-8 leading-tight">
                 {t("home.ctaTitle")}
@@ -293,7 +279,7 @@ export default function Home() {
               </p>
               <Link
                 to="/booking"
-                className="inline-block bg-surface-container-lowest text-primary px-10 py-5 rounded-lg font-bold text-lg hover:bg-secondary-fixed transition-all shadow-xl active:scale-95"
+                className="action-secondary bg-surface-container-lowest"
               >
                 {t("home.bookNow")}
               </Link>

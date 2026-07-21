@@ -18,6 +18,7 @@ export default function Booking() {
   const services = useAllServices();
   const practitioners = useAllPractitioners();
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const [step, setStep] = useState(1);
   const [bookingData, setBookingData] = useState({
@@ -34,9 +35,7 @@ export default function Booking() {
   const prevStep = () => setStep((s) => s - 1);
 
   function onsubmit(): void {
-    let navigate = useNavigate();
     alert(t("booking.thankYou"));
-    // Redirect to home or another page after booking
     navigate("/");
   }
 
@@ -52,7 +51,7 @@ export default function Booking() {
   ];
 
   return (
-    <div className="pt-24 md:pt-32 pb-20 min-h-screen bg-surface-container-low">
+    <div data-page="booking" className="pt-10 md:pt-16 pb-20 min-h-screen bg-surface-container-low">
       <div className="max-w-4xl mx-auto px-4 md:px-8">
         {/* Progress Header */}
         <div className="mb-8 md:mb-12">
@@ -64,11 +63,12 @@ export default function Booking() {
               {t("booking.step", { current: step, total: 4 })}
             </span>
           </div>
-          <div className="h-1.5 w-full bg-slate-200 rounded-full overflow-hidden">
+          <div className="h-1.5 w-full bg-slate-200 overflow-hidden" aria-hidden="true">
             <motion.div
               className="h-full bg-primary"
-              initial={{ width: "0%" }}
-              animate={{ width: `${(step / 4) * 100}%` }}
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: step / 4 }}
+              style={{ transformOrigin: "left center" }}
             />
           </div>
         </div>
@@ -103,15 +103,13 @@ export default function Booking() {
                         nextStep();
                       }}
                       className={cn(
-                        "p-6 rounded-2xl border text-left transition-all group",
+                        "p-6 rounded-2xl border text-left transition-colors group",
                         bookingData.service === service.title
                           ? "border-primary bg-primary/5"
                           : "border-slate-100 hover:border-primary/30 hover:bg-slate-50",
                       )}
                     >
-                      <span className="material-symbols-outlined text-3xl text-primary mb-4">
-                        {service.icon}
-                      </span>
+                      <CalendarIcon className="mb-4 h-6 w-6 text-primary" aria-hidden="true" />
                       <h3 className="font-headline text-xl text-primary mb-2">
                         {service.title}
                       </h3>
@@ -134,8 +132,10 @@ export default function Booking() {
               >
                 <div className="flex items-center gap-4">
                   <button
+                    type="button"
                     onClick={prevStep}
-                    className="p-2 rounded-full hover:bg-slate-100 transition-colors"
+                    className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg hover:bg-slate-100 transition-colors"
+                    aria-label={t("booking.back")}
                   >
                     <ArrowLeft className="w-5 h-5 text-slate-400" />
                   </button>
@@ -160,7 +160,7 @@ export default function Booking() {
                         nextStep();
                       }}
                       className={cn(
-                        "p-6 rounded-2xl border text-left flex items-center gap-4 transition-all",
+                        "p-6 rounded-2xl border text-left flex items-center gap-4 transition-colors",
                         bookingData.practitioner === practitioner.name
                           ? "border-primary bg-primary/5"
                           : "border-slate-100 hover:border-primary/30 hover:bg-slate-50",
@@ -169,7 +169,7 @@ export default function Booking() {
                       <img
                         src={practitioner.avatar}
                         alt={practitioner.name}
-                        className="w-16 h-16 rounded-full object-cover"
+                        className="w-16 h-16 rounded-lg object-cover"
                       />
                       <div>
                         <h3 className="font-headline text-lg text-primary">
@@ -195,8 +195,10 @@ export default function Booking() {
               >
                 <div className="flex items-center gap-4">
                   <button
+                    type="button"
                     onClick={prevStep}
-                    className="p-2 rounded-full hover:bg-slate-100 transition-colors"
+                    className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg hover:bg-slate-100 transition-colors"
+                    aria-label={t("booking.back")}
                   >
                     <ArrowLeft className="w-5 h-5 text-slate-400" />
                   </button>
@@ -212,30 +214,33 @@ export default function Booking() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                   <div className="space-y-4">
-                    <label className="text-xs font-label uppercase tracking-widest text-slate-400">
+                    <label htmlFor="booking-date" className="text-sm font-semibold text-slate-500">
                       {t("booking.meetingDate")}
                     </label>
                     <input
+                      id="booking-date"
                       type="date"
-                      className="w-full p-4 rounded-xl bg-surface border border-slate-200 outline-none focus:border-primary"
+                      className="w-full min-h-12 p-4 rounded-xl bg-surface border border-slate-200 outline-2 outline-transparent focus-visible:outline-focus"
                       onChange={(e) =>
                         setBookingData({ ...bookingData, date: e.target.value })
                       }
                     />
+                    <p className="min-h-[1lh] text-xs text-slate-500" aria-live="polite" />
                   </div>
                   <div className="space-y-4">
-                    <label className="text-xs font-label uppercase tracking-widest text-slate-400">
+                    <span className="text-sm font-semibold text-slate-500">
                       {t("booking.timeSlot")}
-                    </label>
+                    </span>
                     <div className="grid grid-cols-2 gap-2">
                       {timeSlots.map((time) => (
                         <button
+                          type="button"
                           key={time}
                           onClick={() =>
                             setBookingData({ ...bookingData, time })
                           }
                           className={cn(
-                            "py-3 rounded-lg border text-sm font-medium transition-all",
+                            "py-3 rounded-lg border text-sm font-medium transition-colors",
                             bookingData.time === time
                               ? "bg-primary text-on-primary border-primary"
                               : "border-slate-100 hover:border-primary/30",
@@ -251,7 +256,7 @@ export default function Booking() {
                 <button
                   disabled={!bookingData.date || !bookingData.time}
                   onClick={nextStep}
-                  className="w-full py-5 bg-primary text-on-primary font-bold rounded-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="action-primary w-full"
                 >
                   {t("booking.continue")}
                 </button>
@@ -268,8 +273,10 @@ export default function Booking() {
               >
                 <div className="flex items-center gap-4">
                   <button
+                    type="button"
                     onClick={prevStep}
-                    className="p-2 rounded-full hover:bg-slate-100 transition-colors"
+                    className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg hover:bg-slate-100 transition-colors"
+                    aria-label={t("booking.back")}
                   >
                     <ArrowLeft className="w-5 h-5 text-slate-400" />
                   </button>
@@ -283,31 +290,43 @@ export default function Booking() {
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <input
+                <div className="space-y-5">
+                  <label className="grid gap-2 text-sm font-semibold text-slate-500">
+                    {t("booking.fullName")}
+                    <input
                     type="text"
-                    placeholder={t("booking.fullName")}
-                    className="w-full p-4 rounded-xl bg-surface border border-slate-200 outline-none focus:border-primary"
+                    autoComplete="name"
+                    className="w-full min-h-12 p-4 rounded-xl bg-surface border border-slate-200 outline-2 outline-transparent focus-visible:outline-focus"
                     onChange={(e) =>
                       setBookingData({ ...bookingData, name: e.target.value })
                     }
                   />
-                  <input
+                    <span className="min-h-[1lh] text-xs font-normal" aria-live="polite" />
+                  </label>
+                  <label className="grid gap-2 text-sm font-semibold text-slate-500">
+                    {t("booking.email")}
+                    <input
                     type="email"
-                    placeholder={t("booking.email")}
-                    className="w-full p-4 rounded-xl bg-surface border border-slate-200 outline-none focus:border-primary"
+                    autoComplete="email"
+                    className="w-full min-h-12 p-4 rounded-xl bg-surface border border-slate-200 outline-2 outline-transparent focus-visible:outline-focus"
                     onChange={(e) =>
                       setBookingData({ ...bookingData, email: e.target.value })
                     }
                   />
-                  <input
+                    <span className="min-h-[1lh] text-xs font-normal" aria-live="polite" />
+                  </label>
+                  <label className="grid gap-2 text-sm font-semibold text-slate-500">
+                    {t("booking.phoneNumber")}
+                    <input
                     type="tel"
-                    placeholder={t("booking.phoneNumber")}
-                    className="w-full p-4 rounded-xl bg-surface border border-slate-200 outline-none focus:border-primary"
+                    autoComplete="tel"
+                    className="w-full min-h-12 p-4 rounded-xl bg-surface border border-slate-200 outline-2 outline-transparent focus-visible:outline-focus"
                     onChange={(e) =>
                       setBookingData({ ...bookingData, phone: e.target.value })
                     }
                   />
+                    <span className="min-h-[1lh] text-xs font-normal" aria-live="polite" />
+                  </label>
                 </div>
 
                 <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
@@ -335,7 +354,8 @@ export default function Booking() {
                 </div>
 
                 <button
-                  className="w-full py-5 bg-primary text-on-primary font-bold rounded-xl shadow-lg hover:opacity-95 active:scale-95 transition-all"
+                  disabled={!bookingData.name || !bookingData.email || !bookingData.phone}
+                  className="action-primary w-full"
                   onClick={() => onsubmit()}
                 >
                   {t("booking.confirmBooking")}

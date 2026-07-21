@@ -15,7 +15,7 @@ import { useTranslation } from "react-i18next";
 export default function About() {
   const { t } = useTranslation();
   return (
-    <div className="pt-24 md:pt-32 pb-20">
+    <div data-page="about" className="pt-10 md:pt-16 pb-20">
       {/* Hero */}
       <section className="max-w-7xl mx-auto px-4 md:px-8 mb-12 md:mb-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -24,36 +24,15 @@ export default function About() {
             animate={{ opacity: 1, x: 0 }}
             className="space-y-8"
           >
-            <span className="text-xs font-label uppercase tracking-widest text-primary font-bold">
-              {t("about.badge")}
-            </span>
             <h1 className="font-headline text-5xl md:text-7xl text-primary leading-tight tracking-tight">
               {t("about.heroTitle1")} <br />
-              <span className="italic font-normal">
+              <span className="font-normal">
                 {t("about.heroTitle2")}
               </span>
             </h1>
             <p className="text-lg text-secondary leading-relaxed">
               {t("about.heroBody")}
             </p>
-            <div className="grid grid-cols-2 gap-8">
-              <div>
-                <h4 className="text-3xl font-headline text-primary mb-1">
-                  10+
-                </h4>
-                <p className="text-xs text-slate-500 uppercase tracking-widest">
-                  {t("about.yearsExperience")}
-                </p>
-              </div>
-              <div>
-                <h4 className="text-3xl font-headline text-primary mb-1">
-                  5k+
-                </h4>
-                <p className="text-xs text-slate-500 uppercase tracking-widest">
-                  {t("about.trustedCustomers")}
-                </p>
-              </div>
-            </div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -64,6 +43,7 @@ export default function About() {
               <img
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwaHgD-q67c3QUX1peg4XAxX8XYs3r9qHEr2T-soFiLwZvB98YV4Qb2XyWLxqdQBVCG3oBMVELQBeY5KVS6Ldps8HZTBHK4qHEX98gSmRFsxt-tXsHexLBt_grBLMBJ3-wXOpKbhjKcsZ0_Y_-hZxxXtvHQ49dEX_QyyZeJIYBTaf3VUpb4pPaEH4Js4ljYCVk-lCXQgEOm2IAOjegX86aj65qgSgO4zHMxvA7pqhAhPwoV8dzl5Z649Ynd9GeWS01fr0-2OIIyz4"
                 alt="Our clinic"
+                fetchPriority="high"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -79,17 +59,17 @@ export default function About() {
       {/* Values */}
       <section className="bg-surface-container-low py-16 md:py-32">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="text-center mb-12 md:mb-20">
+          <div className="mb-12 md:mb-20">
             <h2 className="font-headline text-4xl text-primary mb-4">
               {t("about.coreValues")}
             </h2>
-            <p className="text-secondary max-w-xl mx-auto">
+            <p className="text-secondary max-w-xl">
               {t("about.coreValuesDesc")}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            <div className="bg-white p-6 md:p-10 rounded-2xl border border-slate-100 hover:shadow-lg transition-all">
+            <div className="bg-white p-6 md:p-10 rounded-2xl border border-slate-100 transition-colors">
               <div className="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center mb-8">
                 <Heart className="w-6 h-6 text-primary" />
               </div>
@@ -100,7 +80,7 @@ export default function About() {
                 {t("about.dedicationDesc")}
               </p>
             </div>
-            <div className="bg-white p-6 md:p-10 rounded-2xl border border-slate-100 hover:shadow-lg transition-all">
+            <div className="bg-white p-6 md:p-10 rounded-2xl border border-slate-100 transition-colors">
               <div className="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center mb-8">
                 <Award className="w-6 h-6 text-primary" />
               </div>
@@ -111,7 +91,7 @@ export default function About() {
                 {t("about.qualityDesc")}
               </p>
             </div>
-            <div className="bg-white p-6 md:p-10 rounded-2xl border border-slate-100 hover:shadow-lg transition-all">
+            <div className="bg-white p-6 md:p-10 rounded-2xl border border-slate-100 transition-colors">
               <div className="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center mb-8">
                 <Users className="w-6 h-6 text-primary" />
               </div>
@@ -168,11 +148,11 @@ export default function About() {
       {/* Contact Section */}
       <section id="contact" className="bg-surface-container-low py-16 md:py-32">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="text-center mb-12 md:mb-20">
+          <div className="mb-12 md:mb-20">
             <h2 className="font-headline text-4xl text-primary mb-4">
               {t("about.contactTitle")}
             </h2>
-            <p className="text-secondary max-w-xl mx-auto">
+            <p className="text-secondary max-w-xl">
               {t("about.contactDesc")}
             </p>
           </div>
@@ -217,11 +197,11 @@ export default function About() {
                     </h3>
                   </div>
                   <div className="space-y-4">
-                    <div className="flex justify-between border-b border-white/10 pb-2">
+                    <div className="flex justify-between border-b border-rule-2-ui pb-2">
                       <span className="opacity-80">{t("about.monFri")}</span>
                       <span className="font-medium">08:00 - 20:00</span>
                     </div>
-                    <div className="flex justify-between border-b border-white/10 pb-2">
+                    <div className="flex justify-between border-b border-rule-2-ui pb-2">
                       <span className="opacity-80">{t("about.saturday")}</span>
                       <span className="font-medium">09:00 - 18:00</span>
                     </div>
@@ -233,7 +213,6 @@ export default function About() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-2xl"></div>
               </div>
             </div>
 
@@ -243,65 +222,77 @@ export default function About() {
                 <h2 className="font-headline text-3xl text-primary mb-8">
                   {t("about.sendMessage")}
                 </h2>
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={(event) => event.preventDefault()}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="text-xs font-label uppercase tracking-widest text-slate-400">
+                      <label htmlFor="contact-name" className="text-xs font-label uppercase tracking-widest text-slate-400">
                         {t("about.fullName")}
                       </label>
                       <input
+                        id="contact-name"
                         type="text"
+                        autoComplete="name"
                         placeholder={t("about.namePlaceholder")}
-                        className="w-full px-4 py-3 rounded-lg bg-surface border border-slate-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-lg bg-surface border border-slate-200"
                       />
+                      <p className="min-h-[1lh] text-xs text-slate-500" aria-live="polite" />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-xs font-label uppercase tracking-widest text-slate-400">
+                      <label htmlFor="contact-phone" className="text-xs font-label uppercase tracking-widest text-slate-400">
                         {t("about.phoneNumber")}
                       </label>
                       <input
+                        id="contact-phone"
                         type="tel"
+                        autoComplete="tel"
                         placeholder={t("about.phonePlaceholder")}
-                        className="w-full px-4 py-3 rounded-lg bg-surface border border-slate-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-lg bg-surface border border-slate-200"
                       />
+                      <p className="min-h-[1lh] text-xs text-slate-500" aria-live="polite" />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-xs font-label uppercase tracking-widest text-slate-400">
+                    <label htmlFor="contact-email" className="text-xs font-label uppercase tracking-widest text-slate-400">
                       {t("about.email")}
                     </label>
                     <input
+                      id="contact-email"
                       type="email"
+                      autoComplete="email"
                       placeholder={t("about.emailPlaceholder")}
-                      className="w-full px-4 py-3 rounded-lg bg-surface border border-slate-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-lg bg-surface border border-slate-200"
                     />
+                    <p className="min-h-[1lh] text-xs text-slate-500" aria-live="polite" />
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-xs font-label uppercase tracking-widest text-slate-400">
+                    <label htmlFor="contact-topic" className="text-xs font-label uppercase tracking-widest text-slate-400">
                       {t("about.topic")}
                     </label>
-                    <select className="w-full px-4 py-3 rounded-lg bg-surface border border-slate-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all appearance-none">
+                    <select id="contact-topic" className="w-full px-4 py-3 rounded-lg bg-surface border border-slate-200 appearance-none">
                       <option>{t("about.topicTreatment")}</option>
                       <option>{t("about.topicAppointment")}</option>
                       <option>{t("about.topicCollaboration")}</option>
                       <option>{t("about.topicOther")}</option>
                     </select>
+                    <p className="min-h-[1lh] text-xs text-slate-500" aria-live="polite" />
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-xs font-label uppercase tracking-widest text-slate-400">
+                    <label htmlFor="contact-message" className="text-xs font-label uppercase tracking-widest text-slate-400">
                       {t("about.message")}
                     </label>
                     <textarea
+                      id="contact-message"
                       rows={4}
                       placeholder={t("about.messagePlaceholder")}
-                      className="w-full px-4 py-3 rounded-lg bg-surface border border-slate-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
+                      className="w-full px-4 py-3 rounded-lg bg-surface border border-slate-200 resize-y"
                     ></textarea>
+                    <p className="min-h-[1lh] text-xs text-slate-500" aria-live="polite" />
                   </div>
 
-                  <button className="w-full py-5 bg-primary text-on-primary font-bold rounded-xl flex justify-center items-center gap-3 hover:opacity-95 transition-all active:scale-95 shadow-lg">
+                  <button className="action-primary w-full">
                     <Send className="w-5 h-5" />
                     {t("about.sendRequest")}
                   </button>

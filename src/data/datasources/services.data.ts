@@ -25,7 +25,7 @@ export const SERVICES_DATA: Service[] = [
         icon: "psychology",
         title: "Cân bằng tinh thần",
         description:
-          "Điều chỉnh hệ thần kinh, giảm bớt lo âu và cải thiện chất lượng giấc ngủ. Mang lại trạng thái tĩnh tại Clinical Zen đích thực.",
+          "Hỗ trợ điều hòa thần kinh, giảm căng thẳng và cải thiện chất lượng giấc ngủ theo hướng chăm sóc toàn diện.",
       },
       {
         icon: "favorite",

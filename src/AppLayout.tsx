@@ -1,5 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { MotionConfig } from "motion/react";
 import Navbar from "./presentation/components/Navbar";
 import Footer from "./presentation/components/Footer";
 
@@ -13,13 +14,15 @@ function ScrollToTop() {
 
 export default function AppLayout() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="flex min-h-screen flex-col bg-paper-ui text-ink-ui">
       <ScrollToTop />
-      <Navbar />
-      <main className="grow">
-        <Outlet />
-      </main>
-      <Footer />
+      <MotionConfig reducedMotion="user">
+        <Navbar />
+        <main className="grow">
+          <Outlet />
+        </main>
+        <Footer />
+      </MotionConfig>
     </div>
   );
 }

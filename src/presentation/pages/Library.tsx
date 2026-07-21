@@ -16,7 +16,7 @@ export default function Library() {
   const featuredProduct = products[0];
 
   return (
-    <div className="pt-24 md:pt-32 pb-20 max-w-7xl mx-auto px-4 md:px-8">
+    <div data-page="library" className="pt-10 md:pt-16 pb-20 max-w-7xl mx-auto px-4 md:px-8">
       {/* Editorial Header */}
       <header className="mb-12 md:mb-20">
         <motion.div
@@ -26,7 +26,7 @@ export default function Library() {
         >
           <h1 className="font-headline text-5xl md:text-7xl text-primary leading-tight tracking-tight mb-8">
             {t("library.heroTitle1")} <br />
-            <span className="italic font-normal">
+            <span className="font-normal">
               {t("library.heroTitle2")}
             </span>
           </h1>
@@ -41,7 +41,7 @@ export default function Library() {
         {categories.map((cat, i) => (
           <button
             key={cat}
-            className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
+            className={`min-h-11 px-5 py-2 rounded-lg text-sm font-semibold transition-colors ${
               i === 0
                 ? "bg-primary text-on-primary"
                 : "bg-secondary-container text-on-secondary-fixed hover:bg-slate-200"
@@ -66,9 +66,10 @@ export default function Library() {
               <img
                 src={featuredProduct.image}
                 alt={featuredProduct.name}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                fetchPriority="high"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-linear-to-t from-primary/40 to-transparent"></div>
+              <div className="absolute inset-0 bg-primary-container/45"></div>
             </div>
             <div className="relative z-10 p-12 text-on-primary">
               <span className="inline-block px-3 py-1 rounded bg-primary-fixed-dim text-on-primary-fixed text-[10px] font-label uppercase tracking-widest mb-4">
@@ -82,7 +83,7 @@ export default function Library() {
               </p>
               <Link
                 to={`/product/${featuredProduct.id}`}
-                className="inline-flex bg-surface-container-lowest text-primary px-8 py-3 rounded-lg font-semibold items-center gap-2 group-hover:bg-primary group-hover:text-on-primary transition-all"
+                className="action-secondary bg-surface-container-lowest"
               >
                 {t("library.viewDetails")}
                 <ArrowRight className="w-4 h-4" />
@@ -91,7 +92,7 @@ export default function Library() {
           </div>
 
           <div className="flex flex-col gap-8">
-            <div className="bg-surface-container-lowest p-6 md:p-10 rounded-xl flex-1 flex flex-col justify-center border border-slate-100 hover:border-primary/10 transition-all">
+            <div className="bg-surface-container-lowest p-6 md:p-10 rounded-xl flex-1 flex flex-col justify-center border border-slate-100 transition-colors">
               <span className="text-primary text-xs font-label uppercase tracking-tighter mb-2">
                 {t("library.ingredients")}
               </span>
@@ -119,7 +120,7 @@ export default function Library() {
               </p>
               <Link
                 to="/membership"
-                className="text-sm font-label border-b border-on-primary/30 pb-1 hover:border-on-primary transition-all"
+                className="text-sm font-label border-b border-on-primary/30 pb-1 transition-colors"
               >
                 {t("library.learnMore")}
               </Link>
@@ -140,7 +141,8 @@ export default function Library() {
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="flex justify-between items-start mb-2">

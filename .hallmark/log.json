@@ -1,0 +1,22 @@
+[
+  {
+    "date": "2026-07-18",
+    "scope": "app",
+    "macrostructure": "Marquee Hero / Catalogue / Long Document / Workbench",
+    "theme": "Garden-derived custom",
+    "theme_axes": "light / classical-serif / warm",
+    "vibe": "Vietnamese herbal scholarly warm austere",
+    "enrichment": "archival treatment of existing photography",
+    "brief": "Moon Healthcare · traditional Vietnamese clinic redesign"
+  },
+  {
+    "date": "2026-07-18",
+    "scope": "app",
+    "macrostructure": "Split Studio / Ecosystem Index / Narrative Workflow",
+    "theme": "custom",
+    "theme_axes": "light / roman-serif / cool",
+    "vibe": "calm clinical editorial human precise",
+    "enrichment": "existing photography",
+    "brief": "Moon Healthcare · full multi-page redesign"
+  }
+]

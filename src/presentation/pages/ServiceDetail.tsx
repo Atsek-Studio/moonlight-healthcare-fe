@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useServiceById, useAllServices } from "../hooks/useServices";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { Activity, ArrowRight, Brain, ChevronDown, FlaskConical, HeartPulse, Leaf, ShieldCheck, Zap } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
 
@@ -12,11 +12,20 @@ function MaterialIcon({
   name: string;
   className?: string;
 }) {
-  return (
-    <span className={`material-symbols-outlined ${className ?? ""}`}>
-      {name}
-    </span>
-  );
+  const icons: Record<string, typeof Activity> = {
+    architecture: Activity,
+    spa: Leaf,
+    psychology: Brain,
+    favorite: HeartPulse,
+    bolt: Zap,
+    eco: Leaf,
+    shield: ShieldCheck,
+    science: FlaskConical,
+    monitoring: Activity,
+    acupuncture: Activity,
+  };
+  const Icon = icons[name] ?? Activity;
+  return <Icon className={className} aria-hidden="true" />;
 }
 
 export default function ServiceDetail() {
@@ -30,17 +39,18 @@ export default function ServiceDetail() {
   if (!displayService) return null;
 
   return (
-    <div>
+    <div data-page="service-detail">
       {/* Hero Section */}
       <section className="relative min-h-[70vh] lg:h-204.75 flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={displayService.heroImage ?? displayService.image}
             alt={displayService.title}
+            fetchPriority="high"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-linear-to-r from-primary/80 via-primary/40 to-transparent" />
+          <div className="absolute inset-0 bg-primary-container/65" />
         </div>
         <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 w-full">
           <motion.div
@@ -55,7 +65,7 @@ export default function ServiceDetail() {
             <h1 className="font-headline text-5xl md:text-7xl text-white leading-tight mb-6">
               {displayService.title} <br />
               {displayService.subtitle && (
-                <span className="text-3xl md:text-4xl font-light italic opacity-90">
+                <span className="text-3xl md:text-4xl font-normal opacity-90">
                   {displayService.subtitle}
                 </span>
               )}
@@ -70,7 +80,7 @@ export default function ServiceDetail() {
               >
                 {t("serviceDetail.bookNow")}
               </Link>
-              <button className="border border-white/30 text-white backdrop-blur-sm px-8 py-3 rounded-lg font-medium hover:bg-white/10 transition-colors">
+              <button className="action-secondary action-on-dark">
                 {t("serviceDetail.learnMore")}
               </button>
             </div>
@@ -93,9 +103,6 @@ export default function ServiceDetail() {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
               {displayService.benefits[0] && (
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
                   className="md:col-span-4 bg-white p-8 rounded-xl shadow-sm border border-outline-variant/10 flex flex-col justify-between"
                 >
                   <div>
@@ -114,10 +121,6 @@ export default function ServiceDetail() {
               )}
               {displayService.benefits[1] && (
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.1 }}
                   className="md:col-span-8 bg-primary-container text-on-primary-container p-8 rounded-xl flex items-center relative overflow-hidden"
                 >
                   <div className="relative z-10 max-w-md">
@@ -139,10 +142,6 @@ export default function ServiceDetail() {
               )}
               {displayService.benefits[2] && (
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 }}
                   className="md:col-span-7 bg-secondary-container p-8 rounded-xl"
                 >
                   <MaterialIcon
@@ -159,10 +158,6 @@ export default function ServiceDetail() {
               )}
               {displayService.benefits[3] && (
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 }}
                   className="md:col-span-5 bg-surface-container-low p-8 rounded-xl flex flex-col justify-center border border-outline-variant/10"
                 >
                   <h3 className="font-headline text-2xl text-primary mb-3">
@@ -196,13 +191,9 @@ export default function ServiceDetail() {
                 {displayService.processSteps.map((step, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.15 }}
                     className="flex-1 text-center group"
                   >
-                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-outline-variant/20 group-hover:bg-primary group-hover:text-white transition-all duration-300 relative z-10">
+                    <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center mx-auto mb-6 border border-outline-variant/20 transition-colors relative z-10">
                       <span className="font-headline text-2xl">
                         {String(index + 1).padStart(2, "0")}
                       </span>
@@ -225,9 +216,6 @@ export default function ServiceDetail() {
         <section className="py-16 md:py-24 bg-surface">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
               className="bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row items-center shadow-sm"
             >
               <div className="w-full md:w-1/2 h-96 md:h-125">
@@ -276,33 +264,34 @@ export default function ServiceDetail() {
               {displayService.faqs.map((faq, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
                   className="bg-white p-6 rounded-lg border border-outline-variant/10"
                 >
-                  <button
-                    className="flex justify-between items-center w-full text-left"
-                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  >
-                    <span className="font-headline text-lg text-primary">
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="font-headline text-lg text-primary min-w-0">
                       {faq.question}
                     </span>
+                    <button
+                    type="button"
+                    className="inline-flex min-h-11 min-w-11 shrink-0 items-center justify-center rounded-lg"
+                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                    aria-label={openFaq === index ? "Collapse answer" : "Expand answer"}
+                    aria-expanded={openFaq === index}
+                    aria-controls={`service-faq-${index}`}
+                  >
                     <ChevronDown
                       className={`w-5 h-5 text-on-surface-variant transition-transform ${
                         openFaq === index ? "rotate-180" : ""
                       }`}
                     />
-                  </button>
+                    </button>
+                  </div>
                   {openFaq === index && (
-                    <motion.p
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
+                    <p
+                      id={`service-faq-${index}`}
                       className="mt-4 text-on-surface-variant leading-relaxed"
                     >
                       {faq.answer}
-                    </motion.p>
+                    </p>
                   )}
                 </motion.div>
               ))}
@@ -314,33 +303,26 @@ export default function ServiceDetail() {
       {/* Call to Action */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-8">
-          <div className="bg-linear-to-br from-primary to-primary-container rounded-3xl p-12 md:p-20 text-center text-white relative overflow-hidden">
-            <div className="absolute inset-0 opacity-10 pointer-events-none">
-              <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
-              <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-fixed rounded-full blur-[150px] translate-x-1/3 translate-y-1/3" />
-            </div>
+          <div className="bg-primary-container rounded-3xl p-12 md:p-20 text-on-primary-container relative overflow-hidden">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
               className="relative z-10"
             >
               <h2 className="font-headline text-4xl md:text-5xl mb-6">
                 {t("serviceDetail.ctaTitle")}
               </h2>
-              <p className="text-blue-100 text-lg mb-10 max-w-2xl mx-auto">
+              <p className="text-paper-2-ui text-lg mb-10 max-w-2xl mx-auto">
                 {t("serviceDetail.ctaBody")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/booking"
-                  className="bg-white text-primary px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-colors shadow-lg shadow-black/10"
+                  className="action-secondary bg-surface-container-lowest"
                 >
                   {t("serviceDetail.ctaBookNow")}
                 </Link>
                 <Link
                   to="/about#contact"
-                  className="bg-primary-container/40 border border-white/20 backdrop-blur-sm text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors"
+                  className="action-secondary action-on-dark"
                 >
                   {t("serviceDetail.ctaCall")}
                 </Link>

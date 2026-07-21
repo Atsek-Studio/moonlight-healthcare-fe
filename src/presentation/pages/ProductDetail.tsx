@@ -20,7 +20,7 @@ export default function ProductDetail() {
   const { t } = useTranslation();
 
   return (
-    <main className="max-w-7xl mx-auto px-4 md:px-8 pt-24 md:pt-32 pb-16 md:pb-24">
+    <main data-page="product-detail" className="max-w-7xl mx-auto px-4 md:px-8 pt-10 md:pt-16 pb-16 md:pb-24">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 mb-8 md:mb-12 text-slate-500 font-label text-xs uppercase tracking-widest">
         <Link to="/" className="hover:text-primary transition-colors">
@@ -48,7 +48,8 @@ export default function ProductDetail() {
             <img
               src={displayProduct.image}
               alt={displayProduct.name}
-              className="w-full h-full object-cover mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-700"
+              fetchPriority="high"
+              className="w-full h-full object-cover mix-blend-multiply opacity-90"
               referrerPolicy="no-referrer"
             />
           </div>
@@ -56,6 +57,7 @@ export default function ProductDetail() {
             <img
               src="https://images.unsplash.com/photo-1615485242211-739995650747?q=80&w=800&auto=format&fit=crop"
               alt="Natural ingredients"
+              loading="lazy"
               className="w-full h-full object-cover opacity-80"
               referrerPolicy="no-referrer"
             />
@@ -64,6 +66,7 @@ export default function ProductDetail() {
             <img
               src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800&auto=format&fit=crop"
               alt="Healing process"
+              loading="lazy"
               className="w-full h-full object-cover opacity-80"
               referrerPolicy="no-referrer"
             />
@@ -135,11 +138,11 @@ export default function ProductDetail() {
           </div>
 
           <div className="mt-auto space-y-4">
-            <button className="w-full py-5 bg-primary text-on-primary font-semibold rounded-xl flex justify-center items-center gap-3 hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95">
+            <button className="action-primary w-full">
               <ShoppingCart className="w-5 h-5" />
               {t("productDetail.addToCart")}
             </button>
-            <button className="w-full py-4 bg-white text-primary border border-primary/20 font-medium rounded-xl hover:bg-surface-container-low transition-all">
+            <button className="action-secondary w-full">
               {t("productDetail.expertConsultation")}
             </button>
           </div>
@@ -214,7 +217,7 @@ export default function ProductDetail() {
           className="w-full h-full object-cover"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] flex items-center justify-center text-center px-8">
+        <div className="absolute inset-0 bg-primary-container/75 flex items-center justify-center text-center px-8">
           <div className="max-w-2xl text-white">
             <h2 className="font-headline text-4xl md:text-5xl mb-6 leading-tight">
               {t("productDetail.ctaTitle")}
@@ -225,13 +228,13 @@ export default function ProductDetail() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/products"
-                className="px-8 py-4 bg-white text-primary font-semibold rounded-xl hover:bg-slate-50 transition-all"
+                className="action-secondary bg-surface-container-lowest"
               >
                 {t("productDetail.continueShopping")}
               </Link>
               <Link
                 to="/about#contact"
-                className="px-8 py-4 bg-transparent border border-white text-white font-semibold rounded-xl hover:bg-white/10 transition-all"
+                className="action-secondary action-on-dark"
               >
                 {t("productDetail.contactConsultation")}
               </Link>

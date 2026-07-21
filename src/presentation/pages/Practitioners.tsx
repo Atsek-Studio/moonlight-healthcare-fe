@@ -8,7 +8,7 @@ export default function Practitioners() {
   const { t } = useTranslation();
 
   return (
-    <div className="pt-24 md:pt-32 pb-20">
+    <div data-page="practitioners" className="pt-10 md:pt-16 pb-20">
       <section className="max-w-7xl mx-auto px-4 md:px-8 mb-12 md:mb-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -17,7 +17,7 @@ export default function Practitioners() {
         >
           <h1 className="font-headline text-5xl md:text-7xl text-primary leading-tight tracking-tight mb-8">
             {t("practitioners.heroTitle1")} <br />
-            <span className="italic font-normal">
+            <span className="font-normal">
               {t("practitioners.heroTitle2")}
             </span>
           </h1>
@@ -31,14 +31,14 @@ export default function Practitioners() {
         {practitioners.map((practitioner) => (
           <div
             key={practitioner.id}
-            className="group bg-surface-container-lowest rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500"
+            className="group bg-surface-container-lowest rounded-3xl overflow-hidden border border-slate-100 transition-colors"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2">
               <div className="h-80 lg:h-full overflow-hidden">
                 <img
                   src={practitioner.avatar}
                   alt={practitioner.name}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover grayscale transition-[filter] duration-700"
                 />
               </div>
               <div className="p-6 md:p-10 flex flex-col justify-center">
@@ -52,14 +52,14 @@ export default function Practitioners() {
                   {t("practitioners.bio")}
                 </p>
                 <div className="flex gap-4 mb-8">
-                  <button className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
+                  <button type="button" aria-label={`LinkedIn — ${practitioner.name}`} className="min-h-11 min-w-11 rounded-lg bg-slate-100 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
                     <Linkedin className="w-4 h-4" />
                   </button>
-                  <button className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
+                  <button type="button" aria-label={`Email — ${practitioner.name}`} className="min-h-11 min-w-11 rounded-lg bg-slate-100 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
                     <Mail className="w-4 h-4" />
                   </button>
                 </div>
-                <button className="flex items-center gap-2 text-primary font-bold text-sm group-hover:gap-4 transition-all">
+                <button type="button" className="action-secondary">
                   {t("practitioners.viewProfile")}{" "}
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -71,18 +71,15 @@ export default function Practitioners() {
 
       {/* Join Us CTA */}
       <section className="max-w-7xl mx-auto px-4 md:px-8 mt-16 md:mt-32">
-        <div className="bg-slate-900 rounded-3xl p-12 md:p-20 text-center relative overflow-hidden">
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
-          </div>
+        <div className="bg-primary-container rounded-3xl p-12 md:p-20 text-on-primary-container relative overflow-hidden">
           <div className="relative z-10">
-            <h2 className="font-headline text-4xl text-white mb-6">
+            <h2 className="font-headline text-4xl text-on-primary-container mb-6">
               {t("practitioners.joinTitle")}
             </h2>
-            <p className="text-slate-400 max-w-xl mx-auto mb-10">
+            <p className="max-w-xl mb-10 opacity-80">
               {t("practitioners.joinBody")}
             </p>
-            <button className="bg-white text-slate-900 px-10 py-4 rounded-xl font-bold hover:bg-primary-fixed-dim transition-all">
+            <button type="button" className="action-secondary bg-surface-container-lowest">
               {t("practitioners.joinTeam")}
             </button>
           </div>

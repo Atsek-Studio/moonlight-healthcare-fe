@@ -1,0 +1,9 @@
+{
+  "date": "2026-07-18",
+  "framework": "React 19 + Vite 6",
+  "styling": "Tailwind CSS 4",
+  "font_stack": ["Cardo", "IBM Plex Sans", "IBM Plex Mono"],
+  "palette": "locked warm paper, medicinal green ink, and vermilion seal accent",
+  "motion": "motion 12 installed",
+  "spacing": "Hallmark semantic 4-point scale in tokens.css"
+}

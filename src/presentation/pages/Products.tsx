@@ -16,7 +16,7 @@ export default function Products() {
   const filteredProducts = useFilteredProducts(activeCategory, searchQuery);
 
   return (
-    <div className="pt-24 md:pt-32 pb-20">
+    <div data-page="products" className="pt-10 md:pt-16 pb-20">
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 md:px-8 mb-12 md:mb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
@@ -24,12 +24,9 @@ export default function Products() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <span className="text-xs font-label uppercase tracking-widest text-primary font-bold mb-4 block">
-              {t("products.badge")}
-            </span>
             <h1 className="font-headline text-5xl md:text-7xl text-primary leading-tight tracking-tight">
               {t("products.heroTitle1")} <br />
-              <span className="italic font-normal">
+              <span className="font-normal">
                 {t("products.heroTitle2")}
               </span>
             </h1>
@@ -53,7 +50,7 @@ export default function Products() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
+                className={`min-h-11 px-5 py-2 rounded-lg text-sm font-semibold transition-colors ${
                   activeCategory === cat
                     ? "bg-primary text-on-primary shadow-md"
                     : "bg-slate-50 text-slate-500 hover:bg-slate-100"
@@ -63,7 +60,8 @@ export default function Products() {
               </button>
             ))}
           </div>
-          <div className="relative w-full md:w-72">
+          <label className="relative block w-full md:w-72">
+            <span className="sr-only">{t("products.searchPlaceholder")}</span>
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
             <input
               type="text"
@@ -72,7 +70,7 @@ export default function Products() {
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-3 rounded-xl bg-slate-50 border-none focus:ring-2 focus:ring-primary/20 outline-none text-sm"
             />
-          </div>
+          </label>
         </div>
       </section>
 
@@ -80,13 +78,9 @@ export default function Products() {
       <section className="max-w-7xl mx-auto px-4 md:px-8 min-h-100">
         {filteredProducts.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {filteredProducts.map((product, index) => (
-              <motion.div
+            {filteredProducts.map((product) => (
+              <div
                 key={product.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
                 className="group"
               >
                 <Link to={`/product/${product.id}`} className="block">
@@ -94,11 +88,11 @@ export default function Products() {
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute top-4 right-4">
-                      <div className="w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-primary shadow-sm hover:bg-primary hover:text-white transition-all">
+                      <div className="w-10 h-10 rounded-lg bg-paper-ui flex items-center justify-center text-primary transition-colors">
                         <ShoppingBag className="w-5 h-5" />
                       </div>
                     </div>
@@ -127,7 +121,7 @@ export default function Products() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         ) : (
@@ -163,13 +157,15 @@ export default function Products() {
             </h2>
             <p className="text-secondary">{t("products.consultBody")}</p>
           </div>
-          <div className="flex w-full md:w-auto gap-4">
+          <div className="flex w-full flex-col gap-4 sm:flex-row md:w-auto">
+            <label className="sr-only" htmlFor="product-consult-email">{t("products.emailPlaceholder")}</label>
             <input
+              id="product-consult-email"
               type="email"
               placeholder={t("products.emailPlaceholder")}
-              className="grow md:w-64 px-6 py-4 rounded-xl bg-white border border-slate-200 outline-none focus:border-primary transition-all"
+              className="grow md:w-64 px-6 py-4 rounded-xl bg-white border border-slate-200"
             />
-            <button className="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold shadow-lg hover:opacity-90 transition-all">
+            <button className="action-primary">
               {t("products.send")}
             </button>
           </div>
