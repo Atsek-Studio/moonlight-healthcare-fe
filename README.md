@@ -1,145 +1,41 @@
-# Moon Healthcare — Frontend
+# An Nhiên — Traditional Medicine Clinic
 
-A modern Vietnamese healthcare web app for **Moon Healthcare**, a Traditional Medicine clinic. Built with React 19, TypeScript, and Tailwind CSS v4, following **Clean Architecture** principles.
+React + Vite conversion of `traditional-medicine-clinic-v1.html`, preserving the Vietnamese content, original responsive layout, example photography, and demo interactions.
 
----
+## Run
 
-## Tech Stack
+Requires Node.js 18 or newer.
 
-| Layer | Technology |
-|---|---|
-| UI Framework | React 19 + TypeScript |
-| Styling | Tailwind CSS v4 (Vite plugin) |
-| Routing | React Router v7 |
-| Data Fetching | TanStack Query v5 |
-| Animation | Motion (Framer Motion v12) |
-| Icons | Lucide React |
-| i18n | i18next + react-i18next (VI/EN) |
-| Build | Vite v6 |
-| Deploy | Vercel |
-
----
-
-## Project Structure
-
-```
-src/
-├── domain/           # Entities & repository interfaces (pure TypeScript)
-├── data/
-│   ├── datasources/  # Static data sources
-│   └── repositories/ # Repository implementations
-├── usecases/         # Business logic (one file per use case)
-├── di/               # Dependency injection container (singleton instances)
-├── presentation/
-│   ├── components/   # Shared UI components (Navbar, Footer)
-│   ├── hooks/        # React hooks wrapping use cases
-│   └── pages/        # Route-level page components
-├── i18n/
-│   ├── config.ts
-│   └── locales/      # vi.json, en.json
-└── lib/              # Utilities (cn helper)
-```
-
-### Architecture Flow
-
-```
-Page → Hook → Use Case → Repository Interface → Repository Impl → Data Source
-```
-
-Pages never import repositories or data sources directly — all access goes through the DI container via hooks.
-
----
-
-## Pages & Routes
-
-| Path | Page | Description |
-|---|---|---|
-| `/` | Home | Hero, philosophy, services preview, featured products, CTA |
-| `/services` | Services | All services grid with view-details and book actions |
-| `/service/:id` | ServiceDetail | Hero, benefits bento grid, treatment process, specialist, FAQ |
-| `/products` | Products | Filterable / searchable product grid |
-| `/product/:id` | ProductDetail | Full product info, ingredients, quality certs |
-| `/practitioners` | Practitioners | Doctor team cards |
-| `/about` | About | Story, values, contact form, map |
-| `/faq` | FAQ | Searchable accordion FAQ |
-| `/library` | Library | Articles and herbal remedy catalog |
-| `/booking` | Booking | 4-step guided booking flow |
-
----
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js ≥ 18 or Bun
-
-### Install & Run
-
-```bash
-# Install dependencies
+```sh
 npm install
-# or
-bun install
-
-# Start dev server (http://localhost:3000)
 npm run dev
+```
 
-# Type-check
-npm run lint
+Open the local URL printed by Vite. For a production build:
 
-# Production build
+```sh
 npm run build
-
-# Preview production build
 npm run preview
 ```
 
----
+## Project structure
 
-## Internationalization
+- `src/App.jsx`: page composition.
+- `src/sections/`: one component per page section, header, footer, and mobile controls.
+- `src/components/`: reusable cards, booking form, images, translations, and accessible information dialog.
+- `src/hooks/`: navigation, language state, dialog actions, booking validation, and branch map logic.
+- `src/data/clinic.js`: editable services, doctors, products, testimonials, articles, process steps, and statistics.
+- `src/styles/main.css`: responsive styles from the reference.
+- `public/images/herbal-example.svg`: bundled example fallback image.
 
-The app supports **Vietnamese (VI)** and **English (EN)**. Translations live in:
+## Behavior and content
 
-- `src/i18n/locales/vi.json`
-- `src/i18n/locales/en.json`
+- Service, product, video, and contact actions open a native dialog with keyboard dismissal and focus management.
+- The booking form validates required fields, phone format, and a local-calendar minimum date. Confirmation stays in memory; nothing is submitted or stored.
+- The mobile navigation closes after choosing a link or pressing Escape.
+- The map selector changes the embedded Google Maps region.
+- VI / EN translates the labels and headings marked for translation in the reference. Other copy remains Vietnamese, matching the original scope.
+- Photos are example Unsplash images; the local botanical illustration appears if a photo cannot load. Replace the image URLs in `src/data/clinic.js` and the Hero, About, and Videos sections with your own assets.
+- Google Fonts and the map need an internet connection. System font fallbacks and the bundled image remain available offline.
 
-The language preference is persisted in `localStorage`. Toggle via the language button in the Navbar.
-
----
-
-## Deployment (Vercel)
-
-The repo includes a `vercel.json` that rewrites all paths to `index.html` for client-side routing:
-
-```json
-{
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
-}
-```
-
-**To deploy:**
-1. Push the repo to GitHub
-2. Import the project in [vercel.com](https://vercel.com)
-3. Vercel auto-detects Vite — build command: `npm run build`, output dir: `dist`
-
----
-
-## Domain Entities
-
-- **Service** — Clinical service (id, title, description, icon, image, benefits, processSteps, specialist, faqs)
-- **Product** — Herbal product (id, name, price, description, category, benefits, ingredients)
-- **Article** — Library article (id, title, excerpt, category, author)
-- **Practitioner** — Doctor profile (id, name, role, avatar)
-- **FAQ** — Question & answer (id, question, answer, category)
-
----
-
-## Scripts
-
-```bash
-npm run dev       # Dev server on port 3000
-npm run build     # Production build → dist/
-npm run preview   # Preview production build
-npm run lint      # TypeScript type-check (no emit)
-npm run clean     # Remove dist/
-```
+Doctor profiles, metrics, testimonials, addresses, products, and video entries are explicitly illustrative. The page does not include a backend, live appointment submission, checkout, or configured hotline/Zalo account.

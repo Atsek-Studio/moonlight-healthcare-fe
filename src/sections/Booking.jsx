@@ -1,0 +1,5 @@
+import { Translated } from "../components/Translated";
+import { BookingForm } from "../components/BookingForm";
+export function Booking() {
+  return <section className={"booking"} id={"booking"}><div className={"container booking-grid"}><div className={"booking-copy"}><Translated en={"Book a visit"} as="span" className={"eyebrow"}>{"Đăng ký thăm khám"}</Translated><Translated en={"Your wellbeing is worth the first step."} as="h2">{"Sức khỏe của bạn, sự tận tâm của chúng tôi."}</Translated><Translated en={"Leave your details for a consultation. This demo form does not send or store submissions."} as="p" className={"lead"}>{"Để lại thông tin để được tư vấn lịch thăm khám phù hợp. Phiên bản demo hiện chưa gửi hoặc lưu dữ liệu."}</Translated><ul className={"booking-checks"}><li>{"Chủ động lựa chọn ngày khám"}</li><li>{"Được tư vấn quy trình rõ ràng"}</li><li>{"Thông tin cá nhân cần được bảo mật khi tích hợp thật"}</li></ul><a href={"#contact"} className={"btn btn-outline"}>{"Xem thông tin liên hệ →"}</a></div><BookingForm /></div></section>;
+}
