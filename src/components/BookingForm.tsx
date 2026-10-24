@@ -1,0 +1,12 @@
+import { useCollection } from '../content/ContentProvider';
+import { ContentText } from "../content/ContentText";
+import { useBookingForm } from "../hooks/useBookingForm";
+export function BookingForm() {
+  const locations = useCollection('locations');
+  const {
+    submitBooking,
+    today,
+    message
+  } = useBookingForm();
+  return <div className={"form-card"}><h3><ContentText id="bookingform-1" /></h3><p><ContentText id="bookingform-2" /></p><form onSubmit={submitBooking} id={"bookingForm"}><div className={"honeypot"} aria-hidden={"true"}><label><ContentText id="bookingform-3" /><input name={"website"} autoComplete={"off"} tabIndex={-1} /></label></div><div className={"form-grid"}><div className={"field"}><label htmlFor={"fullName"}><ContentText id="bookingform-4" /></label><input id={"fullName"} name={"fullName"} required={true} placeholder={"Nguyễn Văn A"} maxLength={100} pattern={".*\\S.*"} /></div><div className={"field"}><label htmlFor={"phone"}><ContentText id="bookingform-5" /></label><input id={"phone"} name={"phone"} type={"tel"} required={true} inputMode={"tel"} pattern={"[+0-9\\(\\). \\-]{9,16}"} title={"Nhập số điện thoại hợp lệ"} placeholder={"09xx xxx xxx"} /></div><div className={"field"}><label htmlFor={"visitDate"}><ContentText id="bookingform-6" /></label><input min={today} id={"visitDate"} name={"visitDate"} type={"date"} required={true} /></div><div className={"field"}><label htmlFor={"branch"}><ContentText id="bookingform-7" /></label><select id={"branch"} required={true} name={"branch"}><option value={""}><ContentText id="bookingform-8" editable={false} /></option>{locations.length ? locations.map(location => <option key={location.id} value={location.id}>{location.title} — {location.address}</option>) : <option value="" disabled>Chưa cập nhật cơ sở</option>}</select></div><div className={"field full"}><label htmlFor={"condition"}><ContentText id="bookingform-12" /></label><textarea id={"condition"} maxLength={500} placeholder={"Mô tả ngắn điều bạn muốn trao đổi cùng bác sĩ..."} name={"condition"}></textarea></div></div><button className={"btn btn-primary"} type={"submit"}><ContentText id="bookingform-13" /><span className={"arrow"}>{"↗"}</span></button><div className={message ? "form-message show" : "form-message"} role={"status"} aria-live={"polite"} id={"formMessage"}>{message}</div><div className={"form-help"}><ContentText id="bookingform-14" /></div></form></div>;
+}
