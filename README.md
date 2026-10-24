@@ -49,7 +49,14 @@ Without Supabase, development mode provides an explicitly labeled browser-local 
 
 Run the content validation tests with `npm test`. Collection defaults remain in `src/data/clinic.ts`; section text and images are in `src/content/pageDefaults.json`. Published database content supersedes these defaults.
 
-## Visual editing
+## TypeScript-only development
+
+All authored application code, React components, configuration, scripts, and tests use TypeScript (`.ts` / `.tsx`). The persistent project rule is in `AGENTS.md`. JavaScript source files are rejected by `npm run check:typescript`, which also runs before every build. Dependencies and compiled browser output are excluded from this source rule.
+
+- `npm run typecheck`: strict checks for the app, configuration, scripts, and tests.
+- `npm test`: run the TypeScript test suite.
+- `npm run build`: enforce TypeScript-only source, check types, then create the production bundle.
+- `src/types.ts`: shared content, editor, field, and media contracts.
 
 The visual editor opens at `/admin`. Click a highlighted area, edit in the right-hand editor beside the preview, then save to refresh the private preview. Publish or discard unpublished changes with the footer controls.
 
