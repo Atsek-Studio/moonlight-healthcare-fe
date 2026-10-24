@@ -1,3 +1,4 @@
+import { ContentText } from "../content/ContentText";
 import { useEffect, useRef } from 'react';
 import { useClinicDialog } from '../hooks/useClinicDialog';
 export function InfoDialog() {
@@ -15,8 +16,8 @@ export function InfoDialog() {
     if (event.target === ref.current) closeDialog();
   }}>
     <div className="modal-inner"><button type="button" className="modal-close" aria-label="Đóng" onClick={closeDialog}>×</button>
-      <span className="eyebrow">THÔNG TIN MẪU</span><h3 id="modalTitle">{dialog?.title}</h3><p id="modalText">{dialog?.text}</p>
-      <div className="modal-actions"><a href="#booking" className="btn btn-primary" onClick={closeDialog}>Đăng ký tư vấn ↗</a><button type="button" className="btn btn-outline" onClick={closeDialog}>Đóng</button></div>
+      <span className="eyebrow"><ContentText id="infodialog-1" /></span><h3 id="modalTitle">{dialog?.title}</h3><p id="modalText">{dialog?.text}</p>
+      <div className="modal-actions"><a href="#booking" className="btn btn-primary" onClick={closeDialog}><ContentText id="infodialog-2" /></a><button type="button" className="btn btn-outline" onClick={closeDialog}><ContentText id="infodialog-3" /></button></div>
     </div>
   </dialog>;
 }

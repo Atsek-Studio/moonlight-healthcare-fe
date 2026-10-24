@@ -39,3 +39,12 @@ npm run preview
 - Google Fonts and the map need an internet connection. System font fallbacks and the bundled image remain available offline.
 
 Doctor profiles, metrics, testimonials, addresses, products, and video entries are explicitly illustrative. The page does not include a backend, live appointment submission, checkout, or configured hotline/Zalo account.
+
+
+## Content studio
+
+Open `/admin` to manage the public website. The editor supports add/edit/remove/reorder, visible/hidden cards, page text and images, draft saves, a draft preview, and confirmed publication. Behavior stays in hooks and repository modules; admin views live in `src/admin/components`.
+
+Without Supabase, development mode provides an explicitly labeled browser-local editor. Production requires Supabase configuration and an approved staff account. Setup, migration, environment variables, and access verification are documented in [supabase/SETUP.md](supabase/SETUP.md).
+
+Run the content validation tests with `npm test`. Collection defaults remain in `src/data/clinic.js`; section text and images are in `src/content/pageDefaults.json`. Published database content supersedes these defaults.

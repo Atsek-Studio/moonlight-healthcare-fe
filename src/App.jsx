@@ -17,6 +17,6 @@ import { Contact } from "./sections/Contact";
 import { Footer } from "./sections/Footer";
 import { FloatingContact } from "./sections/FloatingContact";
 import { MobileContactBar } from "./sections/MobileContactBar";
-export default function App() {
+export function PublicSite() {
   return <ClinicProvider><a className="skip-link" href="#top">Đến nội dung chính</a><UtilityBar /><Header /><main id="top"><Hero /><Statistics /><About /><Services /><Doctors /><Process /><Videos /><Shop /><Testimonials /><Blog /><Booking /><Contact /></main><Footer /><FloatingContact /><MobileContactBar /><InfoDialog /></ClinicProvider>;
 }

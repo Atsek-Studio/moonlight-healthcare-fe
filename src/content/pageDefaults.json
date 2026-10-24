@@ -1,0 +1,994 @@
+[
+  {
+    "id": "about-1",
+    "section": "About the clinic",
+    "label": "Section image",
+    "kind": "image",
+    "image": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80",
+    "alt": "Cây lá xanh, biểu trưng cho dược liệu thiên nhiên"
+  },
+  {
+    "id": "about-2",
+    "section": "About the clinic",
+    "label": "Section image",
+    "kind": "image",
+    "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=650&q=80",
+    "alt": "Thảo mộc và không gian chăm sóc"
+  },
+  {
+    "id": "about-3",
+    "section": "About the clinic",
+    "label": "Text",
+    "kind": "text",
+    "vi": "“An lành bắt đầu từ sự thấu hiểu.”",
+    "en": "Wellness begins with understanding."
+  },
+  {
+    "id": "about-4",
+    "section": "About the clinic",
+    "label": "Section label",
+    "kind": "text",
+    "vi": "Vì sao chọn An Nhiên",
+    "en": "Why choose An Nhiên"
+  },
+  {
+    "id": "about-5",
+    "section": "About the clinic",
+    "label": "Section heading",
+    "kind": "text",
+    "vi": "Gìn giữ tinh hoa, nâng niu sức khỏe.",
+    "en": "Traditional values. Thoughtful care."
+  },
+  {
+    "id": "about-6",
+    "section": "About the clinic",
+    "label": "Description",
+    "kind": "text",
+    "vi": "Chúng tôi tin rằng việc chăm sóc sức khỏe tốt bắt đầu bằng lắng nghe, tư vấn rõ ràng và lựa chọn phương pháp phù hợp với từng thể trạng.",
+    "en": "We believe good care starts with listening, clear information and a treatment path that respects each patient's needs."
+  },
+  {
+    "id": "blog-1",
+    "section": "Health journal",
+    "label": "Section label",
+    "kind": "text",
+    "vi": "Cẩm nang sức khỏe",
+    "en": "Health journal"
+  },
+  {
+    "id": "blog-2",
+    "section": "Health journal",
+    "label": "Section heading",
+    "kind": "text",
+    "vi": "Sống khỏe từ những điều giản dị",
+    "en": "Small insights for better living"
+  },
+  {
+    "id": "blog-3",
+    "section": "Health journal",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Hỏi ý kiến bác sĩ →",
+    "en": "Ask a physician →"
+  },
+  {
+    "id": "booking-1",
+    "section": "Booking section",
+    "label": "Section label",
+    "kind": "text",
+    "vi": "Đăng ký thăm khám",
+    "en": "Book a visit"
+  },
+  {
+    "id": "booking-2",
+    "section": "Booking section",
+    "label": "Section heading",
+    "kind": "text",
+    "vi": "Sức khỏe của bạn, sự tận tâm của chúng tôi.",
+    "en": "Your wellbeing is worth the first step."
+  },
+  {
+    "id": "booking-3",
+    "section": "Booking section",
+    "label": "Description",
+    "kind": "text",
+    "vi": "Để lại thông tin để được tư vấn lịch thăm khám phù hợp. Phiên bản demo hiện chưa gửi hoặc lưu dữ liệu.",
+    "en": "Leave your details for a consultation. This demo form does not send or store submissions."
+  },
+  {
+    "id": "booking-4",
+    "section": "Booking section",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Chủ động lựa chọn ngày khám",
+    "en": ""
+  },
+  {
+    "id": "booking-5",
+    "section": "Booking section",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Được tư vấn quy trình rõ ràng",
+    "en": ""
+  },
+  {
+    "id": "booking-6",
+    "section": "Booking section",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Thông tin cá nhân cần được bảo mật khi tích hợp thật",
+    "en": ""
+  },
+  {
+    "id": "booking-7",
+    "section": "Booking section",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Xem thông tin liên hệ →",
+    "en": ""
+  },
+  {
+    "id": "contact-1",
+    "section": "Contact information",
+    "label": "Section label",
+    "kind": "text",
+    "vi": "Kết nối với An Nhiên",
+    "en": "Visit us"
+  },
+  {
+    "id": "contact-2",
+    "section": "Contact information",
+    "label": "Section heading",
+    "kind": "text",
+    "vi": "Luôn sẵn lòng lắng nghe",
+    "en": "Here when you need us"
+  },
+  {
+    "id": "contact-3",
+    "section": "Contact information",
+    "label": "Description",
+    "kind": "text",
+    "vi": "Địa chỉ, số điện thoại và đường dẫn Zalo sẽ được cập nhật sau khi có thông tin phòng khám thực tế.",
+    "en": ""
+  },
+  {
+    "id": "contact-4",
+    "section": "Contact information",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Hotline tư vấn",
+    "en": ""
+  },
+  {
+    "id": "contact-5",
+    "section": "Contact information",
+    "label": "Description",
+    "kind": "text",
+    "vi": "Chưa cấu hình số điện thoại",
+    "en": ""
+  },
+  {
+    "id": "contact-6",
+    "section": "Contact information",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Giờ làm việc (minh họa)",
+    "en": ""
+  },
+  {
+    "id": "contact-7",
+    "section": "Contact information",
+    "label": "Description",
+    "kind": "text",
+    "vi": "Thứ 2 – Chủ nhật · 07:30 – 19:00",
+    "en": ""
+  },
+  {
+    "id": "contact-8",
+    "section": "Contact information",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Hệ thống cơ sở",
+    "en": ""
+  },
+  {
+    "id": "contact-9",
+    "section": "Contact information",
+    "label": "Description",
+    "kind": "text",
+    "vi": "TP. Hồ Chí Minh — địa chỉ chi tiết chờ cập nhật",
+    "en": ""
+  },
+  {
+    "id": "contact-10",
+    "section": "Contact information",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Zalo / Tư vấn trực tuyến",
+    "en": ""
+  },
+  {
+    "id": "contact-11",
+    "section": "Contact information",
+    "label": "Description",
+    "kind": "text",
+    "vi": "Chưa cấu hình tài khoản Zalo OA",
+    "en": ""
+  },
+  {
+    "id": "contact-12",
+    "section": "Contact information",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Yêu cầu thông tin liên hệ →",
+    "en": ""
+  },
+  {
+    "id": "contact-13",
+    "section": "Contact information",
+    "label": "Text",
+    "kind": "text",
+    "vi": "CHỌN KHU VỰC",
+    "en": ""
+  },
+  {
+    "id": "contact-14",
+    "section": "Contact information",
+    "label": "Text",
+    "kind": "text",
+    "vi": "TP. Hồ Chí Minh (tổng quan)",
+    "en": ""
+  },
+  {
+    "id": "contact-15",
+    "section": "Contact information",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Khu vực phía Đông",
+    "en": ""
+  },
+  {
+    "id": "contact-16",
+    "section": "Contact information",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Khu vực trung tâm",
+    "en": ""
+  },
+  {
+    "id": "contact-17",
+    "section": "Contact information",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Khu vực phía Tây",
+    "en": ""
+  },
+  {
+    "id": "contact-18",
+    "section": "Contact information",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Bản đồ chỉ hiển thị khu vực, không phải vị trí cơ sở thực tế.",
+    "en": ""
+  },
+  {
+    "id": "doctors-1",
+    "section": "Doctor section",
+    "label": "Section label",
+    "kind": "text",
+    "vi": "Đội ngũ chuyên môn",
+    "en": "Meet the team"
+  },
+  {
+    "id": "doctors-2",
+    "section": "Doctor section",
+    "label": "Section heading",
+    "kind": "text",
+    "vi": "Tận tâm trong từng cuộc thăm khám",
+    "en": "People behind your care"
+  },
+  {
+    "id": "doctors-3",
+    "section": "Doctor section",
+    "label": "Description",
+    "kind": "text",
+    "vi": "Hồ sơ dưới đây là vị trí minh họa, sẽ thay bằng chân dung và bằng cấp bác sĩ thực tế khi triển khai.",
+    "en": "Doctor profiles below are placeholders. Replace with approved identities, portraits and verified qualifications."
+  },
+  {
+    "id": "doctors-4",
+    "section": "Doctor section",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Lưu ý bản thiết kế: số liệu thành tựu, ảnh và thông tin đội ngũ hiện chỉ để dựng bố cục. Cần xác minh trước khi xuất bản.",
+    "en": ""
+  },
+  {
+    "id": "floatingcontact-1",
+    "section": "Floating contact buttons",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Zalo",
+    "en": ""
+  },
+  {
+    "id": "footer-1",
+    "section": "Footer",
+    "label": "Description",
+    "kind": "text",
+    "vi": "Một không gian chăm sóc sức khỏe mang tinh thần y học cổ truyền, sự thấu hiểu và cách tiếp cận chuyên nghiệp.",
+    "en": ""
+  },
+  {
+    "id": "footer-2",
+    "section": "Footer",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Thiết kế minh họa — không phải website cơ sở y tế đang hoạt động.",
+    "en": ""
+  },
+  {
+    "id": "footer-3",
+    "section": "Footer",
+    "label": "Heading",
+    "kind": "text",
+    "vi": "Khám phá",
+    "en": ""
+  },
+  {
+    "id": "footer-4",
+    "section": "Footer",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Về chúng tôi",
+    "en": ""
+  },
+  {
+    "id": "footer-5",
+    "section": "Footer",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Dịch vụ",
+    "en": ""
+  },
+  {
+    "id": "footer-6",
+    "section": "Footer",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Đội ngũ bác sĩ",
+    "en": ""
+  },
+  {
+    "id": "footer-7",
+    "section": "Footer",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Video",
+    "en": ""
+  },
+  {
+    "id": "footer-8",
+    "section": "Footer",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Gian hàng",
+    "en": ""
+  },
+  {
+    "id": "footer-9",
+    "section": "Footer",
+    "label": "Heading",
+    "kind": "text",
+    "vi": "Thông tin",
+    "en": ""
+  },
+  {
+    "id": "footer-10",
+    "section": "Footer",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Đặt lịch khám",
+    "en": ""
+  },
+  {
+    "id": "footer-11",
+    "section": "Footer",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Cẩm nang sức khỏe",
+    "en": ""
+  },
+  {
+    "id": "footer-12",
+    "section": "Footer",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Liên hệ",
+    "en": ""
+  },
+  {
+    "id": "footer-13",
+    "section": "Footer",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Số giấy phép hoạt động: chờ cập nhật",
+    "en": ""
+  },
+  {
+    "id": "footer-14",
+    "section": "Footer",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Thông tin pháp nhân: chờ cập nhật",
+    "en": ""
+  },
+  {
+    "id": "footer-15",
+    "section": "Footer",
+    "label": "Text",
+    "kind": "text",
+    "vi": "© 2026 An Nhiên — Website concept / demo only.",
+    "en": ""
+  },
+  {
+    "id": "footer-16",
+    "section": "Footer",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Designed for clarity, trust & care.",
+    "en": ""
+  },
+  {
+    "id": "header-1",
+    "section": "Navigation",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Về chúng tôi",
+    "en": "About us"
+  },
+  {
+    "id": "header-2",
+    "section": "Navigation",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Dịch vụ",
+    "en": "Services"
+  },
+  {
+    "id": "header-3",
+    "section": "Navigation",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Bác sĩ",
+    "en": "Doctors"
+  },
+  {
+    "id": "header-4",
+    "section": "Navigation",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Video",
+    "en": "Videos"
+  },
+  {
+    "id": "header-5",
+    "section": "Navigation",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Gian hàng",
+    "en": "Herbal shop"
+  },
+  {
+    "id": "header-6",
+    "section": "Navigation",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Kiến thức",
+    "en": "Insights"
+  },
+  {
+    "id": "header-7",
+    "section": "Navigation",
+    "label": "Text",
+    "kind": "text",
+    "vi": "VI",
+    "en": ""
+  },
+  {
+    "id": "header-8",
+    "section": "Navigation",
+    "label": "Text",
+    "kind": "text",
+    "vi": "/ EN",
+    "en": ""
+  },
+  {
+    "id": "header-9",
+    "section": "Navigation",
+    "label": "Text",
+    "kind": "text",
+    "vi": "VI /",
+    "en": ""
+  },
+  {
+    "id": "header-10",
+    "section": "Navigation",
+    "label": "Text",
+    "kind": "text",
+    "vi": "EN",
+    "en": ""
+  },
+  {
+    "id": "header-11",
+    "section": "Navigation",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Đặt lịch khám ↗",
+    "en": "Book a visit"
+  },
+  {
+    "id": "hero-1",
+    "section": "Welcome section",
+    "label": "Section label",
+    "kind": "text",
+    "vi": "Tinh hoa y học cổ truyền",
+    "en": "Traditional wisdom, modern care"
+  },
+  {
+    "id": "hero-2",
+    "section": "Welcome section",
+    "label": "Main headline",
+    "kind": "text",
+    "vi": "Chăm sóc sức khỏe <em>từ gốc,</em> an yên mỗi ngày.",
+    "en": "A gentler path to <em>lasting wellbeing.</em>"
+  },
+  {
+    "id": "hero-3",
+    "section": "Welcome section",
+    "label": "Description",
+    "kind": "text",
+    "vi": "Kết hợp tinh hoa y học cổ truyền với sự thấu hiểu từng người bệnh, đồng hành cùng bạn trên hành trình chăm sóc sức khỏe bền vững.",
+    "en": "A thoughtful space where traditional medicine meets attentive, personalized care for you and your family."
+  },
+  {
+    "id": "hero-4",
+    "section": "Welcome section",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Đặt lịch thăm khám ↗",
+    "en": "Book an appointment ↗"
+  },
+  {
+    "id": "hero-5",
+    "section": "Welcome section",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Liên hệ phòng khám →",
+    "en": "Contact the clinic →"
+  },
+  {
+    "id": "hero-6",
+    "section": "Welcome section",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Thăm khám cá nhân hóa",
+    "en": "Personalized care"
+  },
+  {
+    "id": "hero-7",
+    "section": "Welcome section",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Tư vấn minh bạch",
+    "en": "Transparent consultation"
+  },
+  {
+    "id": "hero-8",
+    "section": "Welcome section",
+    "label": "Section image",
+    "kind": "image",
+    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1100&q=85",
+    "alt": "Không gian chăm sóc sức khỏe nhẹ nhàng, hình minh họa"
+  },
+  {
+    "id": "hero-9",
+    "section": "Welcome section",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Thân • Tâm • An",
+    "en": ""
+  },
+  {
+    "id": "hero-10",
+    "section": "Welcome section",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Chăm sóc từ sự thấu hiểu",
+    "en": "Care rooted in understanding"
+  },
+  {
+    "id": "mobilecontactbar-1",
+    "section": "Mobile contact bar",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "☎ Gọi",
+    "en": ""
+  },
+  {
+    "id": "mobilecontactbar-2",
+    "section": "Mobile contact bar",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Zalo",
+    "en": ""
+  },
+  {
+    "id": "mobilecontactbar-3",
+    "section": "Mobile contact bar",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Đặt lịch ↗",
+    "en": ""
+  },
+  {
+    "id": "process-1",
+    "section": "Patient journey",
+    "label": "Section label",
+    "kind": "text",
+    "vi": "Quy trình thăm khám",
+    "en": "Patient journey"
+  },
+  {
+    "id": "process-2",
+    "section": "Patient journey",
+    "label": "Section heading",
+    "kind": "text",
+    "vi": "An tâm từ bước đầu tiên",
+    "en": "Clear steps. Peace of mind."
+  },
+  {
+    "id": "services-1",
+    "section": "Services",
+    "label": "Section label",
+    "kind": "text",
+    "vi": "Dịch vụ nổi bật",
+    "en": "Our care"
+  },
+  {
+    "id": "services-2",
+    "section": "Services",
+    "label": "Section heading",
+    "kind": "text",
+    "vi": "Phương pháp chăm sóc phù hợp với bạn",
+    "en": "Care for your everyday wellbeing"
+  },
+  {
+    "id": "services-3",
+    "section": "Services",
+    "label": "Description",
+    "kind": "text",
+    "vi": "Mỗi phương pháp cần được bác sĩ thăm khám, cân nhắc chỉ định và hướng dẫn phù hợp.",
+    "en": "Explore traditional therapies. A clinician will assess whether each option is appropriate for you."
+  },
+  {
+    "id": "shop-1",
+    "section": "Shop section",
+    "label": "Section label",
+    "kind": "text",
+    "vi": "Gian hàng thảo mộc",
+    "en": "Herbal essentials"
+  },
+  {
+    "id": "shop-2",
+    "section": "Shop section",
+    "label": "Section heading",
+    "kind": "text",
+    "vi": "Chăm sóc nhẹ nhàng mỗi ngày",
+    "en": "A little care for every day"
+  },
+  {
+    "id": "shop-3",
+    "section": "Shop section",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Tư vấn sản phẩm →",
+    "en": "Ask about products →"
+  },
+  {
+    "id": "shop-4",
+    "section": "Shop section",
+    "label": "Description",
+    "kind": "text",
+    "vi": "* Sản phẩm là nội dung minh họa, chưa mở bán. Thực phẩm bảo vệ sức khỏe (nếu có) không phải là thuốc và không thay thế thuốc chữa bệnh.",
+    "en": ""
+  },
+  {
+    "id": "testimonials-1",
+    "section": "Patient stories",
+    "label": "Section label",
+    "kind": "text",
+    "vi": "Lắng nghe người bệnh",
+    "en": "Patient experiences"
+  },
+  {
+    "id": "testimonials-2",
+    "section": "Patient stories",
+    "label": "Section heading",
+    "kind": "text",
+    "vi": "Sự tận tâm trong từng trải nghiệm",
+    "en": "Care you can feel"
+  },
+  {
+    "id": "testimonials-3",
+    "section": "Patient stories",
+    "label": "Description",
+    "kind": "text",
+    "vi": "Mẫu nội dung đánh giá cho bản thiết kế; chỉ xuất bản lời chứng thực thực tế khi có sự đồng ý của người bệnh.",
+    "en": ""
+  },
+  {
+    "id": "utilitybar-1",
+    "section": "Announcement bar",
+    "label": "Text",
+    "kind": "text",
+    "vi": "DEMO / CONCEPT V1",
+    "en": ""
+  },
+  {
+    "id": "utilitybar-2",
+    "section": "Announcement bar",
+    "label": "Text",
+    "kind": "text",
+    "vi": " — Nội dung, hình ảnh và thông tin bác sĩ là minh họa",
+    "en": ""
+  },
+  {
+    "id": "utilitybar-3",
+    "section": "Announcement bar",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Y học cổ truyền • Chăm sóc tận tâm • Sống cân bằng",
+    "en": ""
+  },
+  {
+    "id": "videos-1",
+    "section": "Video feature",
+    "label": "Section label",
+    "kind": "text",
+    "vi": "Góc video",
+    "en": "Stories & knowledge"
+  },
+  {
+    "id": "videos-2",
+    "section": "Video feature",
+    "label": "Section heading",
+    "kind": "text",
+    "vi": "Hiểu hơn về y học cổ truyền",
+    "en": "A closer look at our approach"
+  },
+  {
+    "id": "videos-3",
+    "section": "Video feature",
+    "label": "Description",
+    "kind": "text",
+    "vi": "Khám phá không gian thăm khám, trò chuyện cùng bác sĩ và các kiến thức chăm sóc sức khỏe hữu ích.",
+    "en": "A space for clinic tours, physician conversations and practical health education."
+  },
+  {
+    "id": "videos-4",
+    "section": "Video feature",
+    "label": "Section image",
+    "kind": "image",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
+    "alt": "Không gian tư vấn sức khỏe, hình minh họa"
+  },
+  {
+    "id": "videos-5",
+    "section": "Video feature",
+    "label": "Heading",
+    "kind": "text",
+    "vi": "Khám phá không gian An Nhiên",
+    "en": ""
+  },
+  {
+    "id": "videos-6",
+    "section": "Video feature",
+    "label": "Description",
+    "kind": "text",
+    "vi": "VIDEO GIỚI THIỆU · Sắp cập nhật",
+    "en": ""
+  },
+  {
+    "id": "videos-7",
+    "section": "Video feature",
+    "label": "Description",
+    "kind": "text",
+    "vi": "Video đang là phần giữ chỗ; bổ sung YouTube/Vimeo ID để bật trình phát thật.",
+    "en": ""
+  },
+  {
+    "id": "brand-1",
+    "section": "Clinic identity",
+    "label": "Text",
+    "kind": "text",
+    "vi": "An Nhiên",
+    "en": ""
+  },
+  {
+    "id": "brand-2",
+    "section": "Clinic identity",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Y HỌC CỔ TRUYỀN",
+    "en": ""
+  },
+  {
+    "id": "bookingform-1",
+    "section": "Booking form",
+    "label": "Heading",
+    "kind": "text",
+    "vi": "Đặt lịch thăm khám",
+    "en": ""
+  },
+  {
+    "id": "bookingform-2",
+    "section": "Booking form",
+    "label": "Description",
+    "kind": "text",
+    "vi": "Điền thông tin bên dưới để xem luồng xác nhận mẫu.",
+    "en": ""
+  },
+  {
+    "id": "bookingform-3",
+    "section": "Booking form",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Website ",
+    "en": ""
+  },
+  {
+    "id": "bookingform-4",
+    "section": "Booking form",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Họ và tên *",
+    "en": ""
+  },
+  {
+    "id": "bookingform-5",
+    "section": "Booking form",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Số điện thoại *",
+    "en": ""
+  },
+  {
+    "id": "bookingform-6",
+    "section": "Booking form",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Ngày mong muốn *",
+    "en": ""
+  },
+  {
+    "id": "bookingform-7",
+    "section": "Booking form",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Cơ sở mong muốn *",
+    "en": ""
+  },
+  {
+    "id": "bookingform-8",
+    "section": "Booking form",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Chọn khu vực",
+    "en": ""
+  },
+  {
+    "id": "bookingform-9",
+    "section": "Booking form",
+    "label": "Text",
+    "kind": "text",
+    "vi": "TP. Hồ Chí Minh — Trung tâm (mẫu)",
+    "en": ""
+  },
+  {
+    "id": "bookingform-10",
+    "section": "Booking form",
+    "label": "Text",
+    "kind": "text",
+    "vi": "TP. Hồ Chí Minh — Phía Đông (mẫu)",
+    "en": ""
+  },
+  {
+    "id": "bookingform-11",
+    "section": "Booking form",
+    "label": "Text",
+    "kind": "text",
+    "vi": "TP. Hồ Chí Minh — Phía Tây (mẫu)",
+    "en": ""
+  },
+  {
+    "id": "bookingform-12",
+    "section": "Booking form",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Nhu cầu thăm khám",
+    "en": ""
+  },
+  {
+    "id": "bookingform-13",
+    "section": "Booking form",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Gửi yêu cầu đặt lịch ",
+    "en": ""
+  },
+  {
+    "id": "bookingform-14",
+    "section": "Booking form",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Bản demo giao diện — chưa kết nối CRM/email/Zalo; không có dữ liệu nào được gửi đi.",
+    "en": ""
+  },
+  {
+    "id": "servicecard-1",
+    "section": "Service labels",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Tìm hiểu dịch vụ ↗",
+    "en": ""
+  },
+  {
+    "id": "productcard-1",
+    "section": "Product labels",
+    "label": "Text",
+    "kind": "text",
+    "vi": "Giá cập nhật",
+    "en": ""
+  },
+  {
+    "id": "productcard-2",
+    "section": "Product labels",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Hỏi mua sản phẩm ↗",
+    "en": ""
+  },
+  {
+    "id": "articlecard-1",
+    "section": "Article labels",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Trao đổi với bác sĩ →",
+    "en": ""
+  },
+  {
+    "id": "infodialog-1",
+    "section": "Information dialog",
+    "label": "Section label",
+    "kind": "text",
+    "vi": "THÔNG TIN MẪU",
+    "en": ""
+  },
+  {
+    "id": "infodialog-2",
+    "section": "Information dialog",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Đăng ký tư vấn ↗",
+    "en": ""
+  },
+  {
+    "id": "infodialog-3",
+    "section": "Information dialog",
+    "label": "Button / link label",
+    "kind": "text",
+    "vi": "Đóng",
+    "en": ""
+  }
+]

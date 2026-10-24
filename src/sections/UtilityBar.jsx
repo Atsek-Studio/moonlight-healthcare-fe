@@ -1,3 +1,4 @@
+import { ContentText } from "../content/ContentText";
 export function UtilityBar() {
-  return <div className={"utility"}><div className={"container"}><span>{"✦ "}<strong>{"DEMO / CONCEPT V1"}</strong>{" — Nội dung, hình ảnh và thông tin bác sĩ là minh họa"}</span><span>{"Y học cổ truyền • Chăm sóc tận tâm • Sống cân bằng"}</span></div></div>;
+  return <div className={"utility"}><div className={"container"}><span>{"✦ "}<strong><ContentText id="utilitybar-1" /></strong><ContentText id="utilitybar-2" /></span><span><ContentText id="utilitybar-3" /></span></div></div>;
 }

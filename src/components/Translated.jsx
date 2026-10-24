@@ -1,16 +1,17 @@
-import { Fragment } from 'react';
+import { renderText } from '../content/renderText';
 import { useLanguage } from '../hooks/useLanguage';
-// The reference only translates selected headings and navigation labels.
-// Support its single <em> token without injecting HTML into the DOM.
+import { useContentBlock } from '../content/ContentProvider';
 export function Translated({
   as: Tag = 'span',
   en,
+  contentId,
   children,
   ...props
 }) {
   const {
     language
   } = useLanguage();
-  const content = language === 'en' ? en.split(/(<em>.*?<\/em>)/g).map((part, index) => part.startsWith('<em>') ? <em key={index}>{part.slice(4, -5)}</em> : <Fragment key={index}>{part}</Fragment>) : children;
-  return <Tag {...props}>{content}</Tag>;
+  const block = useContentBlock(contentId);
+  const text = block ? language === 'en' ? block.en || block.vi : block.vi : language === 'en' ? en : undefined;
+  return <Tag {...props}>{typeof text === 'string' ? renderText(text) : children}</Tag>;
 }
