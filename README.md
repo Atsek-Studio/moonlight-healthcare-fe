@@ -48,3 +48,9 @@ Open `/admin` to manage the public website. The editor supports add/edit/remove/
 Without Supabase, development mode provides an explicitly labeled browser-local editor. Production requires Supabase configuration and an approved staff account. Setup, migration, environment variables, and access verification are documented in [supabase/SETUP.md](supabase/SETUP.md).
 
 Run the content validation tests with `npm test`. Collection defaults remain in `src/data/clinic.ts`; section text and images are in `src/content/pageDefaults.json`. Published database content supersedes these defaults.
+
+## Visual editing
+
+The visual editor opens at `/admin`. Click a highlighted area, edit in the right-hand editor beside the preview, then save to refresh the private preview. Publish or discard unpublished changes with the footer controls.
+
+The left sidebar always shows guidance and shortcuts. The preview occupies the middle. Selecting an editable area opens a separate right-hand editor, which is hidden by default. Both sidebars remain visible while editing, without a backdrop over the preview.

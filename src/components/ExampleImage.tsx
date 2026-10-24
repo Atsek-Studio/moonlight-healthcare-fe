@@ -12,7 +12,7 @@ export function ExampleImage({
   const [failed, setFailed] = useState(false);
   useEffect(() => setFailed(false), [image]);
   const fallback = `${import.meta.env.BASE_URL}images/herbal-example.svg`;
-  return <img {...props} src={failed || !image || !safeImageUrl(image) ? fallback : image} alt={block?.alt ?? alt} onError={event => {
+  return <img {...props} data-edit-key={contentId ? "pageContent" : undefined} data-edit-id={contentId} src={failed || !image || !safeImageUrl(image) ? fallback : image} alt={block?.alt ?? alt} onError={event => {
     if (!failed) setFailed(true);else event.currentTarget.onerror = null;
   }} />;
 }

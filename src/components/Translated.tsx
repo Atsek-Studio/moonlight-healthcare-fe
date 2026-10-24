@@ -13,5 +13,5 @@ export function Translated({
   } = useLanguage();
   const block = useContentBlock(contentId);
   const text = block ? language === 'en' ? block.en || block.vi : block.vi : language === 'en' ? en : undefined;
-  return <Tag {...props}>{typeof text === 'string' ? renderText(text) : children}</Tag>;
+  return <Tag {...props} data-edit-key={contentId ? "pageContent" : undefined} data-edit-id={contentId}>{typeof text === 'string' ? renderText(text) : children}</Tag>;
 }

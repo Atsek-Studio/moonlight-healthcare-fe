@@ -10,5 +10,5 @@ export function ServiceCard({
   const {
     showService
   } = useClinicDialog();
-  return <article className="service-card"><CardPhoto item={item} className="service-photo" /><div className="service-body"><span className="tag">{item.tag}</span><h3>{item.title}</h3><p>{item.description}</p><button type="button" className="text-link detail" onClick={() => showService(item)}><ContentText id="servicecard-1" /></button></div></article>;
+  return <article data-edit-key="serviceCards" data-edit-id={item.id} className="service-card"><CardPhoto item={item} className="service-photo" /><div className="service-body"><span className="tag">{item.tag}</span><h3>{item.title}</h3><p>{item.description}</p><button type="button" className="text-link detail" onClick={() => showService(item)}><ContentText id="servicecard-1" /></button></div></article>;
 }

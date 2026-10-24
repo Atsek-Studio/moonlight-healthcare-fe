@@ -5,5 +5,5 @@ import { useClinicDialog } from '../hooks/useClinicDialog';
 export function TestimonialCard({
   item
 }: {item:ContentItem}) {
-  return <article className="testimonial"><div className="stars" aria-label="5 sao">★★★★★</div><blockquote>{item.quote}</blockquote><b>{item.name}</b><small>{item.note}</small></article>;
+  return <article data-edit-key="testimonialCards" data-edit-id={item.id} className="testimonial"><div className="stars" aria-label="5 sao">★★★★★</div><blockquote>{item.quote}</blockquote><b>{item.name}</b><small>{item.note}</small></article>;
 }

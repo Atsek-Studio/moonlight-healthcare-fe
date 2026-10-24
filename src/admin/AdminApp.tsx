@@ -14,6 +14,7 @@ import { guideFor } from './presentation';
 import { ContentProvider } from '../content/ContentProvider';
 import { PublicSite } from '../App';
 import './admin.css';
+import { VisualEditor } from './components/VisualEditor';
 export default function AdminApp() {
   useEffect(() => {
     const previous = document.title;
@@ -29,6 +30,7 @@ function AdminWorkspace({
   auth
 }: {auth:ReturnType<typeof useAdminAuth>}) {
   const editor = useContentEditor();
+  const [visual, setVisual] = useState(true);
   const [activeKey, setActiveKey] = useState<SectionKey | 'home'>('home'),
     [selectedId, setSelectedId] = useState<string|null>(null),
     [query, setQuery] = useState(''),
@@ -49,6 +51,7 @@ function AdminWorkspace({
   }, [editor.error]);
   if (editor.loading) return <div className="cms cms-loading" role="status">Getting your website ready to edit…</div>;
   if (!editor.content) return <div className="cms cms-loading"><h1>We couldn’t open your website</h1><p role="alert">{editor.error}</p><div className="cms-actions"><button className="cms-button" onClick={editor.reload}>Try again</button><button className="cms-button" onClick={() => auth.signOut().catch(error => setActionError(error.message))}>Sign out</button></div>{actionError && <p role="alert">{actionError}</p>}</div>;
+  if (visual) return <VisualEditor editor={{...editor,content:editor.content,published:editor.published!}} local={auth.isLocalEditor} onManage={() => setVisual(false)} onSignOut={() => auth.signOut()} />;
   if (preview) return <><div className="cms cms-preview-bar"><strong>Only you can see these changes</strong><span>Check how your website will look before you update it.</span><button className="cms-button" onClick={() => setPreview(false)}>← Back to editing</button></div><div className="cms-preview-public"><ContentProvider override={editor.content}><PublicSite /></ContentProvider></div></>;
   const home = activeKey === 'home',
     section = contentSections.find(section => section.key === activeKey),
@@ -117,7 +120,7 @@ function AdminWorkspace({
     });
   }
   const addLabel = `Add ${/^[aeiou]/i.test(guide.noun) ? 'an' : 'a'} ${guide.noun}`;
-  return <div className="cms cms-workspace cms-friendly"><AdminSidebar activeKey={activeKey} onSelect={selectSection} onSignOut={signOut} local={auth.isLocalEditor} /><div className="cms-main"><header className="cms-topbar"><div><span className="cms-status-light" />{auth.isLocalEditor ? 'Practice mode' : 'Your website manager'}</div><a href="/" target="_blank" rel="noreferrer">View website ↗</a></header>
+  return <div className="cms cms-workspace cms-friendly"><AdminSidebar activeKey={activeKey} onSelect={selectSection} onSignOut={signOut} local={auth.isLocalEditor} /><div className="cms-main"><header className="cms-topbar"><div><span className="cms-status-light" />{auth.isLocalEditor ? 'Practice mode' : 'Your website manager'}</div><button className="cms-button" onClick={() => setVisual(true)}>Visual editor</button><a href="/" target="_blank" rel="noreferrer">View website ↗</a></header>
     {auth.isLocalEditor && <div className="cms-local-banner"><strong>You’re in practice mode.</strong> Try changes safely. They are visible only in this browser.</div>}
     <main className="cms-content">{(editor.error || actionError) && <div className="cms-alert" role="alert" tabIndex={-1}><b>Something needs your attention</b><p>{editor.error || actionError}</p>{editor.error?.includes('Another editor') && <button className="cms-button" onClick={() => setConfirmation({
             title: 'Open the latest saved version?',

@@ -8,5 +8,5 @@ export function VideoCard({
   const {
     showVideo
   } = useClinicDialog();
-  return <button type="button" className="video-item" onClick={() => showVideo(item)}><span className="video-thumb photo"><ExampleImage src={item.image} alt={item.alt} loading="lazy" /></span><span><b>{item.title}</b><small>{item.note}</small></span></button>;
+  return <button data-edit-key="videoCards" data-edit-id={item.id} type="button" className="video-item" onClick={() => showVideo(item)}><span className="video-thumb photo"><ExampleImage src={item.image} alt={item.alt} loading="lazy" /></span><span><b>{item.title}</b><small>{item.note}</small></span></button>;
 }

@@ -9,5 +9,5 @@ export function ContentText({
     language
   } = useLanguage();
   const text = renderText(language === 'en' && block?.en ? block.en : block?.vi || '');
-  return editable ? <span>{text}</span> : <>{text}</>;
+  return editable ? <span data-edit-key="pageContent" data-edit-id={id}>{text}</span> : <>{text}</>;
 }

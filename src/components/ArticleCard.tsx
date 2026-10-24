@@ -7,5 +7,5 @@ import { CardPhoto } from "./CardPhoto";
 export function ArticleCard({
   item
 }: {item:ContentItem}) {
-  return <article className="post"><CardPhoto item={item} className="post-photo" /><div className="post-content"><span className="tag">{item.tag}</span><h3>{item.title}</h3><p>{item.description}</p><a href="#booking" className="text-link"><ContentText id="articlecard-1" /></a></div></article>;
+  return <article data-edit-key="articleCards" data-edit-id={item.id} className="post"><CardPhoto item={item} className="post-photo" /><div className="post-content"><span className="tag">{item.tag}</span><h3>{item.title}</h3><p>{item.description}</p><a href="#booking" className="text-link"><ContentText id="articlecard-1" /></a></div></article>;
 }
