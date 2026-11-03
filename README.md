@@ -1,6 +1,6 @@
 # An Nhiên — Traditional Medicine Clinic
 
-React + TypeScript + Vite conversion of `traditional-medicine-clinic-v1.html`, preserving the Vietnamese content, original responsive layout, example photography, and demo interactions.
+React + TypeScript + Vite website for An Nhiên, with a botanical editorial design, interactive care guide, visit preparation planner, and content studio.
 
 ## Run
 
@@ -31,14 +31,14 @@ npm run preview
 ## Behavior and content
 
 - Service, product, video, and contact actions open a native dialog with keyboard dismissal and focus management.
-- The booking form validates required fields, phone format, and a local-calendar minimum date. Confirmation stays in memory; nothing is submitted or stored.
+- The visit planner at `#booking` lets visitors choose a care topic and an optional future date without collecting personal or health information. With a configured clinic email, it opens a mail draft containing those choices; otherwise it offers configured phone/Zalo contact, or clearly states that appointments are not open. No appointment is automatically booked.
 - The mobile navigation closes after choosing a link or pressing Escape.
 - The map selector changes the embedded Google Maps region.
 - VI / EN translates the labels and headings marked for translation in the reference. Other copy remains Vietnamese, matching the original scope.
-- Photos are example Unsplash images; the local botanical illustration appears if a photo cannot load. Replace the image URLs in `src/data/clinic.ts` and the Hero, About, and Videos sections with your own assets.
+- The hero uses a locally bundled AI botanical illustration. About and journal photography is bundled locally from the existing Unsplash assets, with credits in the footer. The botanical SVG remains the failure fallback. Replace editorial imagery with approved clinic assets when available.
 - Google Fonts and the map need an internet connection. System font fallbacks and the bundled image remain available offline.
 
-Doctor profiles, metrics, testimonials, addresses, products, and video entries are explicitly illustrative. The page does not include a backend, live appointment submission, checkout, or configured hotline/Zalo account.
+Doctor profiles, metrics, testimonials, products, and video entries remain available in the CMS but are hidden in the new default content until staff enable approved entries. Existing saved CMS publications and drafts retain their content. The page does not include live appointment submission or checkout; staff must configure real contact channels.
 
 
 ## Content studio
@@ -60,4 +60,4 @@ All authored application code, React components, configuration, scripts, and tes
 
 The visual editor opens at `/admin`. Click a highlighted area, edit in the right-hand editor beside the preview, then save to refresh the private preview. Publish or discard unpublished changes with the footer controls.
 
-The left sidebar always shows guidance and shortcuts. The preview occupies the middle. Selecting an editable area opens a separate right-hand editor, which is hidden by default. Both sidebars remain visible while editing, without a backdrop over the preview.
+The left sidebar always shows guidance and shortcuts. The preview occupies the middle. Desktop renders at a fixed 1440px viewport and scales to fit; mobile renders at 390px. Opening an editor panel never changes the selected viewport. Selecting an editable area opens a separate right-hand editor, which is hidden by default. Both sidebars remain visible while editing, without a backdrop over the preview.
