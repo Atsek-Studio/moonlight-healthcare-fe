@@ -4,8 +4,8 @@
     "section": "About the clinic",
     "label": "Section image",
     "kind": "image",
-    "image": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80",
-    "alt": "Cây lá xanh, biểu trưng cho dược liệu thiên nhiên"
+    "image": "/images/botanical-leaves.jpg",
+    "alt": "Chi tiết lá xanh, ảnh biên tập"
   },
   {
     "id": "about-2",
@@ -20,8 +20,8 @@
     "section": "About the clinic",
     "label": "Text",
     "kind": "text",
-    "vi": "“An lành bắt đầu từ sự thấu hiểu.”",
-    "en": "Wellness begins with understanding."
+    "vi": "Gần thiên nhiên. Gần với chính mình.",
+    "en": "Closer to nature. Closer to yourself."
   },
   {
     "id": "about-4",
@@ -36,16 +36,16 @@
     "section": "About the clinic",
     "label": "Section heading",
     "kind": "text",
-    "vi": "Gìn giữ tinh hoa, nâng niu sức khỏe.",
-    "en": "Traditional values. Thoughtful care."
+    "vi": "Lắng nghe trước. Chăm sóc sau.",
+    "en": "Listen first. Care follows."
   },
   {
     "id": "about-6",
     "section": "About the clinic",
     "label": "Description",
     "kind": "text",
-    "vi": "Chúng tôi tin rằng việc chăm sóc sức khỏe tốt bắt đầu bằng lắng nghe, tư vấn rõ ràng và lựa chọn phương pháp phù hợp với từng thể trạng.",
-    "en": "We believe good care starts with listening, clear information and a treatment path that respects each patient's needs."
+    "vi": "Mỗi người có một thể trạng, một nếp sống, một câu chuyện. Việc chăm sóc bắt đầu bằng hiểu bạn, rồi mới chọn phương pháp phù hợp.",
+    "en": "Every person brings a different history and way of life. Understanding you comes before choosing an approach."
   },
   {
     "id": "blog-1",
@@ -60,8 +60,8 @@
     "section": "Health journal",
     "label": "Section heading",
     "kind": "text",
-    "vi": "Sống khỏe từ những điều giản dị",
-    "en": "Small insights for better living"
+    "vi": "Ghi chép sống khỏe",
+    "en": "Notes on living well"
   },
   {
     "id": "blog-3",
@@ -84,16 +84,16 @@
     "section": "Booking section",
     "label": "Section heading",
     "kind": "text",
-    "vi": "Sức khỏe của bạn, sự tận tâm của chúng tôi.",
-    "en": "Your wellbeing is worth the first step."
+    "vi": "Sẵn sàng cho lần khám đầu.",
+    "en": "Ready for your first visit."
   },
   {
     "id": "booking-3",
     "section": "Booking section",
     "label": "Description",
     "kind": "text",
-    "vi": "Để lại thông tin để được tư vấn lịch thăm khám phù hợp. Phiên bản demo hiện chưa gửi hoặc lưu dữ liệu.",
-    "en": "Leave your details for a consultation. This demo form does not send or store submissions."
+    "vi": "Chọn điều bạn muốn trao đổi và ngày dự kiến. Một vài chuẩn bị nhỏ giúp buổi thăm khám rõ ràng, nhẹ nhàng hơn.",
+    "en": "Choose what you want to discuss and a preferred day. A little preparation makes the conversation easier."
   },
   {
     "id": "booking-4",
@@ -140,8 +140,8 @@
     "section": "Contact information",
     "label": "Section heading",
     "kind": "text",
-    "vi": "Luôn sẵn lòng lắng nghe",
-    "en": "Here when you need us"
+    "vi": "Kết nối với An Nhiên",
+    "en": "Connect with An Nhien"
   },
   {
     "id": "contact-3",
@@ -428,8 +428,8 @@
     "section": "Footer",
     "label": "Text",
     "kind": "text",
-    "vi": "© 2026 An Nhiên — Website concept / demo only.",
-    "en": ""
+    "vi": "© 2026 An Nhiên. Bản giới thiệu, chưa mở nhận lịch.",
+    "en": "© 2026 An Nhien. Website concept. Appointments not yet open."
   },
   {
     "id": "footer-16",
@@ -524,8 +524,8 @@
     "section": "Navigation",
     "label": "Button / link label",
     "kind": "text",
-    "vi": "Đặt lịch khám ↗",
-    "en": "Book a visit"
+    "vi": "Chuẩn bị thăm khám ↗",
+    "en": "Prepare for a visit ↗"
   },
   {
     "id": "hero-1",
@@ -540,40 +540,40 @@
     "section": "Welcome section",
     "label": "Main headline",
     "kind": "text",
-    "vi": "Chăm sóc sức khỏe <em>từ gốc,</em> an yên mỗi ngày.",
-    "en": "A gentler path to <em>lasting wellbeing.</em>"
+    "vi": "An Nhiên.\nY học cổ truyền.",
+    "en": "An Nhien.\nTraditional care."
   },
   {
     "id": "hero-3",
     "section": "Welcome section",
     "label": "Description",
     "kind": "text",
-    "vi": "Kết hợp tinh hoa y học cổ truyền với sự thấu hiểu từng người bệnh, đồng hành cùng bạn trên hành trình chăm sóc sức khỏe bền vững.",
-    "en": "A thoughtful space where traditional medicine meets attentive, personalized care for you and your family."
+    "vi": "Y học cổ truyền, bắt đầu từ lắng nghe. Tìm hiểu phương pháp chăm sóc và chuẩn bị cho buổi thăm khám của bạn.",
+    "en": "Traditional medicine, starting with a conversation. Explore the approach and prepare for your first consultation."
   },
   {
     "id": "hero-4",
     "section": "Welcome section",
     "label": "Button / link label",
     "kind": "text",
-    "vi": "Đặt lịch thăm khám ↗",
-    "en": "Book an appointment ↗"
+    "vi": "Chuẩn bị thăm khám ↗",
+    "en": "Prepare for a visit ↗"
   },
   {
     "id": "hero-5",
     "section": "Welcome section",
     "label": "Button / link label",
     "kind": "text",
-    "vi": "Liên hệ phòng khám →",
-    "en": "Contact the clinic →"
+    "vi": "Tìm hiểu phương pháp ↗",
+    "en": "Explore our approach ↗"
   },
   {
     "id": "hero-6",
     "section": "Welcome section",
     "label": "Text",
     "kind": "text",
-    "vi": "Thăm khám cá nhân hóa",
-    "en": "Personalized care"
+    "vi": "Thấu hiểu thể trạng. Tôn trọng từng người.",
+    "en": "Understand the person. Respect the individual."
   },
   {
     "id": "hero-7",
@@ -588,8 +588,8 @@
     "section": "Welcome section",
     "label": "Section image",
     "kind": "image",
-    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1100&q=85",
-    "alt": "Không gian chăm sóc sức khỏe nhẹ nhàng, hình minh họa"
+    "image": "/images/an-nhien-botanicals.webp",
+    "alt": "Lá xanh, gừng và dược liệu, ảnh minh họa AI"
   },
   {
     "id": "hero-9",
@@ -644,8 +644,8 @@
     "section": "Patient journey",
     "label": "Section heading",
     "kind": "text",
-    "vi": "An tâm từ bước đầu tiên",
-    "en": "Clear steps. Peace of mind."
+    "vi": "Từng bước, thật rõ ràng.",
+    "en": "A clear path to care."
   },
   {
     "id": "services-1",
@@ -660,16 +660,16 @@
     "section": "Services",
     "label": "Section heading",
     "kind": "text",
-    "vi": "Phương pháp chăm sóc phù hợp với bạn",
-    "en": "Care for your everyday wellbeing"
+    "vi": "Phương pháp chăm sóc",
+    "en": "Ways to care"
   },
   {
     "id": "services-3",
     "section": "Services",
     "label": "Description",
     "kind": "text",
-    "vi": "Mỗi phương pháp cần được bác sĩ thăm khám, cân nhắc chỉ định và hướng dẫn phù hợp.",
-    "en": "Explore traditional therapies. A clinician will assess whether each option is appropriate for you."
+    "vi": "Tìm hiểu từng phương pháp. Bác sĩ sẽ đánh giá chỉ định và trao đổi rõ trước khi thực hiện.",
+    "en": "Explore each approach. A clinician assesses suitability and explains the options before treatment."
   },
   {
     "id": "shop-1",
@@ -940,8 +940,8 @@
     "section": "Service labels",
     "label": "Button / link label",
     "kind": "text",
-    "vi": "Tìm hiểu dịch vụ ↗",
-    "en": ""
+    "vi": "Tìm hiểu thêm",
+    "en": "Explore this approach"
   },
   {
     "id": "productcard-1",

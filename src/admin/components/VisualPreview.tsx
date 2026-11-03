@@ -1,3 +1,4 @@
+import { usePreviewViewport } from '../hooks/usePreviewViewport';
 import type { SiteContent, SectionKey, EditTarget } from '../../types';
 import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
@@ -8,6 +9,7 @@ import { ContentProvider } from '../../content/ContentProvider';
 
 // A same-origin, empty frame isolates website styles without exposing a draft route.
 export function VisualPreview({ content, published, onSelect, device }: {content:SiteContent;published:SiteContent;onSelect:(target:EditTarget)=>void;device:string}) {
+  const viewport = usePreviewViewport(device);
   const frame = useRef<HTMLIFrameElement>(null);
   const [body, setBody] = useState<HTMLElement|null>(null);
   const callback = useRef(onSelect);
@@ -50,5 +52,5 @@ export function VisualPreview({ content, published, onSelect, device }: {content
       node.setAttribute('aria-label', `Edit ${node.textContent?.trim().slice(0, 65) || node.getAttribute('alt') || 'website image'}`);
     });
   }, [body, content, published]);
-  return <div className={`visual-preview visual-preview-${device}`}><iframe ref={frame} title="Editable website preview" />{body && createPortal(<ContentProvider override={content}><PublicSite /></ContentProvider>, body)}</div>;
+  return <div className={`visual-preview visual-preview-${device}`} ref={viewport.container}><iframe ref={frame} title={`Editable website preview, ${viewport.viewportWidth} pixels`} style={{width:viewport.viewportWidth,height:viewport.viewportHeight,transform:`scale(${viewport.scale})`,transformOrigin:'top left'}} />{body && createPortal(<ContentProvider override={content}><PublicSite /></ContentProvider>, body)}</div>;
 }

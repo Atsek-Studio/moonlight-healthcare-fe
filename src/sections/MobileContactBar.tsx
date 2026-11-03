@@ -1,10 +1,3 @@
-import { ContentText } from '../content/ContentText';
 import { useContactInfo } from '../hooks/useContactInfo';
-export function MobileContactBar() {
-  const {
-    phoneHref,
-    zaloHref,
-    settings
-  } = useContactInfo();
-  return <div className="mobile-bar"><a href={phoneHref}><ContentText id="mobilecontactbar-1" /></a><a href={zaloHref} target={settings.zaloUrl ? '_blank' : undefined} rel={settings.zaloUrl ? 'noopener noreferrer' : undefined}><ContentText id="mobilecontactbar-2" /></a><a href="#booking"><ContentText id="mobilecontactbar-3" /></a></div>;
-}
+import { Translated } from '../components/Translated';
+export function MobileContactBar(){const {phone,phoneHref,settings,zaloHref}=useContactInfo();return <div className="mobile-bar">{phone?<a href={phoneHref}><Translated en="Call the clinic">Gọi phòng khám</Translated></a>:settings.zaloUrl?<a href={zaloHref} target="_blank" rel="noreferrer">Zalo ↗</a>:<a href="#services"><Translated en="Services">Dịch vụ</Translated></a>}<a href="#booking"><Translated en="Prepare for a visit">Chuẩn bị thăm khám</Translated><span aria-hidden="true">↗</span></a></div>;}

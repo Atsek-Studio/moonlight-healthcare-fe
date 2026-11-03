@@ -1,7 +1,11 @@
-import { useCollection } from "../content/ContentProvider";
-import { Translated } from "../components/Translated";
-import { ServiceCard } from "../components/ServiceCard";
-export function Services() {
-  const serviceCards = useCollection("serviceCards");
-  return <section className={"services"} id={"services"}><div className={"container"}><div className={"section-top"}><div><Translated en={"Our care"} as="span" className={"eyebrow"} contentId="services-1">{"Dịch vụ nổi bật"}</Translated><Translated en={"Care for your everyday wellbeing"} as="h2" contentId="services-2">{"Phương pháp chăm sóc phù hợp với bạn"}</Translated></div><Translated en={"Explore traditional therapies. A clinician will assess whether each option is appropriate for you."} as="p" className={"lead"} contentId="services-3">{"Mỗi phương pháp cần được bác sĩ thăm khám, cân nhắc chỉ định và hướng dẫn phù hợp."}</Translated></div><div className={"service-grid"}>{serviceCards.map(item => <ServiceCard key={item.id} item={item} />)}</div></div></section>;
+import { useState } from 'react';
+import { useCollection } from '../content/ContentProvider';
+import { Translated } from '../components/Translated';
+import { ServiceCard } from '../components/ServiceCard';
+export function Services(){
+ const services=useCollection('serviceCards');
+ const [selected,setSelected]=useState('');
+ const current=services.find(item=>item.id===selected)||services[0];
+ if(!current)return null;
+ return <section className="services" id="services"><div className="container"><div className="section-top"><Translated as="h2" contentId="services-2"/><Translated as="p" className="lead" contentId="services-3"/></div><div className="service-explorer"><div className="service-choices" aria-label="Phương pháp chăm sóc">{services.map(item=><button key={item.id} data-edit-key="serviceCards" data-edit-id={item.id} type="button" aria-pressed={current.id===item.id} aria-controls="service-detail" onClick={()=>setSelected(item.id)}>{item.title}<span aria-hidden="true">↗</span></button>)}</div><div id="service-detail" className="service-detail" aria-live="polite"><ServiceCard item={current}/></div></div></div></section>;
 }

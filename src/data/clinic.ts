@@ -117,24 +117,24 @@ export const testimonialCards = [{
 }];
 export const articleCards = [{
   "id": "post-1",
-  "title": "5 thói quen nhỏ giúp bắt đầu ngày mới cân bằng hơn",
+  "title": "Một ngày cân bằng",
   "description": "Nếp sinh hoạt lành mạnh có thể bắt đầu từ những thay đổi rất đơn giản.",
-  "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=700&q=80",
+  "image": "/images/journal-balance.jpg",
   "alt": "Thiền và hít thở, minh họa",
   "tag": "SỐNG KHỎE · 5 PHÚT"
 }, {
   "id": "post-2",
-  "title": "Hiểu đúng về thảo dược trong chăm sóc sức khỏe",
+  "title": "Hiểu về thảo dược",
   "description": "Nguồn gốc, cách dùng và tương tác là những điều nên tìm hiểu.",
-  "image": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=700&q=80",
+  "image": "/images/botanical-leaves.jpg",
   "alt": "Cây thảo mộc, minh họa",
   "tag": "DƯỢC LIỆU · 4 PHÚT"
 }, {
   "id": "post-3",
-  "title": "Chăm sóc cơ xương khớp khi làm việc văn phòng",
-  "description": "Gợi ý vận động nhẹ nhàng và thời điểm cần gặp chuyên gia.",
-  "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=700&q=80",
-  "alt": "Vận động và chăm sóc cơ thể, minh họa",
+  "title": "Thói quen vận động",
+  "description": "Ghi lại thói quen vận động và những điều bạn muốn hỏi bác sĩ.",
+  "image": "/images/journal-movement.jpg",
+  "alt": "Tập luyện thể chất, ảnh biên tập",
   "tag": "VẬN ĐỘNG · 6 PHÚT"
 }];
 export const processSteps = [{

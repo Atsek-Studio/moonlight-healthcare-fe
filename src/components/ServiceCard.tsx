@@ -1,14 +1,7 @@
 import type { ContentItem } from '../types';
-import { ContentText } from "../content/ContentText";
-import { ExampleImage } from './ExampleImage';
-import { Translated } from './Translated';
+import { ContentText } from '../content/ContentText';
 import { useClinicDialog } from '../hooks/useClinicDialog';
-import { CardPhoto } from "./CardPhoto";
-export function ServiceCard({
-  item
-}: {item:ContentItem}) {
-  const {
-    showService
-  } = useClinicDialog();
-  return <article data-edit-key="serviceCards" data-edit-id={item.id} className="service-card"><CardPhoto item={item} className="service-photo" /><div className="service-body"><span className="tag">{item.tag}</span><h3>{item.title}</h3><p>{item.description}</p><button type="button" className="text-link detail" onClick={() => showService(item)}><ContentText id="servicecard-1" /></button></div></article>;
+export function ServiceCard({item}:{item:ContentItem}){
+ const {showService}=useClinicDialog();
+ return <article className="service-card" data-edit-key="serviceCards" data-edit-id={item.id}><h3>{item.title}</h3><p>{item.description}</p><p className="service-explanation">{item.detail}</p><button className="text-link" aria-label={`Tìm hiểu ${item.title}`} type="button" onClick={()=>showService(item)}><ContentText id="servicecard-1"/><span aria-hidden="true">↗</span></button></article>;
 }

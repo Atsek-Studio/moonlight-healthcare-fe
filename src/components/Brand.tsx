@@ -1,7 +1,2 @@
-import { ContentText } from "../content/ContentText";
-export function Brand() {
-  return <a href="#top" className="brand" aria-label="An Nhiên - trang chủ">
-    <div className="brand-mark" aria-hidden="true">✳</div>
-    <div><div className="brand-name"><ContentText id="brand-1" /></div><span className="brand-sub"><ContentText id="brand-2" /></span></div>
-  </a>;
-}
+import { ContentText } from '../content/ContentText';
+export function Brand(){return <a href="#top" className="brand" aria-label="An Nhiên - trang chủ"><svg className="brand-mark" viewBox="0 0 40 48" fill="none" aria-hidden="true"><path d="M20 44V17M20 30C7 30 5 21 6 12c10 0 15 6 14 18ZM20 22C32 22 35 12 34 4c-10 1-15 7-14 18Z" stroke="currentColor" strokeWidth="1.8"/></svg><span className="brand-name"><ContentText id="brand-1"/></span></a>;}

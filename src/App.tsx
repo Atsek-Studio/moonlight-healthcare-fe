@@ -1,3 +1,5 @@
+import { useEntranceMotion } from "./hooks/useEntranceMotion";
+import { useCollection } from "./content/ContentProvider";
 import { ClinicProvider } from "./components/ClinicProvider";
 import { InfoDialog } from "./components/InfoDialog";
 import { UtilityBar } from "./sections/UtilityBar";
@@ -15,8 +17,10 @@ import { Blog } from "./sections/Blog";
 import { Booking } from "./sections/Booking";
 import { Contact } from "./sections/Contact";
 import { Footer } from "./sections/Footer";
-import { FloatingContact } from "./sections/FloatingContact";
 import { MobileContactBar } from "./sections/MobileContactBar";
-export function PublicSite() {
-  return <ClinicProvider><a className="skip-link" href="#top">Đến nội dung chính</a><UtilityBar /><Header /><main id="top"><Hero /><Statistics /><About /><Services /><Doctors /><Process /><Videos /><Shop /><Testimonials /><Blog /><Booking /><Contact /></main><Footer /><FloatingContact /><MobileContactBar /><InfoDialog /></ClinicProvider>;
+function SiteLayout(){
+ const motion=useEntranceMotion();
+ const doctors=useCollection('doctorCards'),products=useCollection('productCards'),videos=useCollection('videoCards'),testimonials=useCollection('testimonialCards'),statistics=useCollection('statistics');
+ return <div ref={motion}><a className="skip-link" href="#top">Đến nội dung chính</a><UtilityBar/><Header/><main id="top"><Hero/><Services/><About/><Process/>{doctors.length>0&&<Doctors/>}{statistics.length>0&&<Statistics/>}{videos.length>0&&<Videos/>}{products.length>0&&<Shop/>}{testimonials.length>0&&<Testimonials/>}<Blog/><Booking/><Contact/></main><Footer/><MobileContactBar/><InfoDialog/></div>;
 }
+export function PublicSite(){return <ClinicProvider><SiteLayout/></ClinicProvider>;}
