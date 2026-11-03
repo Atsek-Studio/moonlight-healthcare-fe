@@ -1,12 +1,27 @@
+import { ContentText } from '../content/ContentText';
 import { Translated } from '../components/Translated';
+import { ClinicMap } from '../components/ClinicMap';
 import { useContactInfo } from '../hooks/useContactInfo';
 import { useBranchMap } from '../hooks/useBranchMap';
 import { phoneLink } from '../content/contact';
-export function Contact(){
- const {settings,phone,zaloHref}=useContactInfo();
- const {locations,selectedLocation,mapBranch,setMapBranch,mapUrl,directionsHref}=useBranchMap();
- const displayPhone=selectedLocation?.phone || phone;
- const hours=selectedLocation?.openingHours || settings.openingHours;
- const configured=Boolean(phone||settings.email||settings.zaloUrl||locations.length);
- return <section className="contact" id="contact"><div className="container"><div className="section-top"><Translated as="h2" contentId="contact-2"/><p className="lead">{settings.note||<Translated en="A useful conversation starts with the right information.">Một cuộc trao đổi tốt bắt đầu từ thông tin rõ ràng.</Translated>}</p></div><div className="contact-grid"><div className="contact-info" data-edit-key="contactInfo" data-edit-id={settings.id}>{configured?<><p className="contact-name">An Nhiên</p>{displayPhone&&<a className="contact-display" href={phoneLink(displayPhone)}>{displayPhone}</a>}{settings.email&&<a className="contact-email" href={`mailto:${settings.email}`}>{settings.email}</a>}{hours&&<p>{hours}</p>}{settings.zaloUrl&&<a className="text-link" href={zaloHref} target="_blank" rel="noreferrer">Zalo ↗</a>}</>:<><p className="contact-name"><Translated en="Let's stay in touch">Hẹn một cuộc trò chuyện.</Translated></p><p><Translated en="Clinic addresses, hours and contact details are being confirmed. Appointments are not open yet.">Địa chỉ, giờ làm việc và thông tin liên hệ đang được xác nhận. Hiện chưa mở nhận lịch thăm khám.</Translated></p><a href="#booking" className="text-link"><Translated en="Prepare for your first visit">Chuẩn bị cho lần khám đầu</Translated><span aria-hidden="true">↗</span></a></>}</div>{locations.length>0?<div className="map-panel" data-edit-key="locations" data-edit-id={selectedLocation?.id}><label className="field">Chọn cơ sở<select value={mapBranch} onChange={e=>setMapBranch(e.target.value)}>{locations.map(item=><option key={item.id} value={item.id}>{item.title}</option>)}</select></label><iframe src={mapUrl} title={`Bản đồ ${selectedLocation?.title || 'phòng khám'}`} loading="lazy" referrerPolicy="no-referrer-when-downgrade"/><p>{selectedLocation?.address}</p><a href={directionsHref} target="_blank" rel="noreferrer" className="text-link">Xem đường đi ↗</a></div>:<div className="contact-close"><Translated as="p" en="A little preparation. A clearer conversation.">Chuẩn bị nhẹ nhàng.<br/>Trao đổi rõ ràng.</Translated></div>}</div></div></section>;
+export function Contact() {
+  const { settings, phone, zaloHref } = useContactInfo();
+  const { locations, selectedLocation, mapBranch, setMapBranch, mapUrl, directionsHref } = useBranchMap();
+  const displayPhone = selectedLocation?.phone || phone;
+  const hours = selectedLocation?.openingHours || settings.openingHours;
+  const hasSamples = !selectedLocation?.address || !displayPhone || !hours || !settings.email;
+  return <section className="contact" id="contact"><div className="container">
+    <div className="section-top"><Translated as="h2" contentId="contact-2"/><p className="lead">{settings.note || <Translated en="Find the clinic, check our hours, and get in touch before your visit.">Tìm phòng khám, xem giờ làm việc và liên hệ trước khi đến thăm khám.</Translated>}</p></div>
+    <div className="contact-grid clinic-contact-grid"><div className="contact-info clinic-details" data-edit-key="contactInfo" data-edit-id={settings.id}>
+      <div><h3 className="contact-name"><ContentText id="brand-1"/></h3><p className="clinic-description"><ContentText id="footer-1"/></p></div>
+      {hasSamples && <p className="clinic-sample-note"><Translated en="Details marked “Sample” illustrate the layout and will be updated by the clinic.">Thông tin có nhãn “Mẫu” dùng để minh họa bố cục, sẽ được phòng khám cập nhật.</Translated></p>}
+      <dl className="clinic-detail-list">
+        <div><dt><Translated en="Address">Địa chỉ</Translated>{!selectedLocation?.address && <span className="sample-label"><Translated en="Sample">Mẫu</Translated></span>}</dt><dd>{selectedLocation?.address || '123 Đường Mẫu, TP. Hồ Chí Minh'}</dd></div>
+        <div><dt><Translated en="Opening hours">Giờ làm việc</Translated>{!hours && <span className="sample-label"><Translated en="Sample">Mẫu</Translated></span>}</dt><dd>{hours || <Translated en="Monday–Sunday · 07:30–19:00">Thứ 2 – Chủ nhật · 07:30 – 19:00</Translated>}</dd></div>
+        <div><dt><Translated en="Phone">Điện thoại</Translated>{!displayPhone && <span className="sample-label"><Translated en="Sample">Mẫu</Translated></span>}</dt><dd>{displayPhone ? <a href={phoneLink(displayPhone)}>{displayPhone}</a> : '028 xxxx xxxx'}</dd></div>
+        <div><dt>Email{!settings.email && <span className="sample-label"><Translated en="Sample">Mẫu</Translated></span>}</dt><dd>{settings.email ? <a href={`mailto:${settings.email}`}>{settings.email}</a> : 'hello@example.com'}</dd></div>
+      </dl>
+      <div className="clinic-contact-actions">{displayPhone && <a className="btn btn-primary" href={phoneLink(displayPhone)}><Translated en="Call the clinic">Gọi phòng khám</Translated></a>}{settings.zaloUrl && <a className="btn btn-outline" href={zaloHref} target="_blank" rel="noopener noreferrer"><Translated en="Chat on Zalo">Tư vấn qua Zalo</Translated><span aria-hidden="true">↗</span></a>}</div>
+    </div><ClinicMap locations={locations} selectedLocation={selectedLocation} selectedId={mapBranch} onSelect={setMapBranch} mapUrl={mapUrl} directionsHref={directionsHref}/></div>
+  </div></section>;
 }

@@ -34,3 +34,17 @@
 .service-choices button{font:500 18px/1.5 var(--font-body);letter-spacing:0;padding:18px 20px;min-height:66px}
 .service-choices button span{font:inherit}
 @media(max-width:540px){.service-choices button{font-size:16px;min-height:56px;padding:14px 16px}.mobile-bar a{font-size:13px}.contact-close p{font-size:24px}}
+
+/* Clinic information and an always-visible location map. */
+.clinic-contact-grid{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px;align-items:start}
+.clinic-details{gap:24px}.clinic-description{margin-top:16px;max-width:46ch;font-size:var(--body)}
+.clinic-sample-note{font-size:var(--small);color:var(--muted);max-width:48ch}
+.clinic-detail-list{display:grid;gap:22px;margin:0;width:100%}.clinic-detail-list>div{display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;align-items:baseline}
+.clinic-detail-list dt{font-size:var(--small);font-weight:500;color:var(--muted)}.clinic-detail-list dd{margin:0;font-size:var(--body);white-space:pre-line;overflow-wrap:anywhere}.clinic-detail-list a:hover{text-decoration:underline;text-underline-offset:4px}
+.sample-label{display:inline-block;margin-left:8px;font-size:13px;font-weight:400;color:var(--muted)}
+.clinic-contact-actions{display:flex;gap:12px;flex-wrap:wrap}.clinic-contact-actions:empty{display:none}
+.clinic-map{background:var(--cream);min-width:0}.clinic-map-heading{padding:20px 24px}.clinic-map-heading>p{font-size:var(--body);font-weight:500}.clinic-map-heading .field{gap:8px}.clinic-map iframe{width:100%;height:390px;display:block;border:0;background:var(--cream)}
+.clinic-map-footer{padding:18px 24px;display:flex;align-items:start;justify-content:space-between;gap:24px}.clinic-map-footer p{font-size:var(--small);max-width:37ch}.clinic-map-footer .text-link{flex-shrink:0;white-space:nowrap;min-height:24px}
+@media(max-width:1000px){.clinic-contact-grid{gap:32px;grid-template-columns:repeat(2,minmax(0,1fr))}.clinic-detail-list>div{grid-template-columns:minmax(0,1fr);gap:5px}.clinic-map iframe{height:400px}.clinic-map-footer{flex-direction:column;gap:12px}}
+@media(max-width:600px){.clinic-contact-grid{grid-template-columns:minmax(0,1fr);gap:36px}.clinic-detail-list>div{grid-template-columns:105px minmax(0,1fr);gap:16px}.clinic-map iframe{height:320px}.clinic-map-heading,.clinic-map-footer{padding:20px}.clinic-description{font-size:var(--body)}}
+@media(max-width:360px){.clinic-detail-list>div{grid-template-columns:minmax(0,1fr);gap:4px}}
