@@ -317,7 +317,7 @@
     "label": "Description",
     "kind": "text",
     "vi": "Một không gian chăm sóc sức khỏe mang tinh thần y học cổ truyền, sự thấu hiểu và cách tiếp cận chuyên nghiệp.",
-    "en": ""
+    "en": "A thoughtful space for traditional medicine, individual understanding and professional care."
   },
   {
     "id": "footer-2",
@@ -341,7 +341,7 @@
     "label": "Button / link label",
     "kind": "text",
     "vi": "Về chúng tôi",
-    "en": ""
+    "en": "About us"
   },
   {
     "id": "footer-5",
@@ -349,7 +349,7 @@
     "label": "Button / link label",
     "kind": "text",
     "vi": "Dịch vụ",
-    "en": ""
+    "en": "Services"
   },
   {
     "id": "footer-6",
@@ -357,7 +357,7 @@
     "label": "Button / link label",
     "kind": "text",
     "vi": "Đội ngũ bác sĩ",
-    "en": ""
+    "en": "Clinicians"
   },
   {
     "id": "footer-7",
@@ -365,7 +365,7 @@
     "label": "Button / link label",
     "kind": "text",
     "vi": "Video",
-    "en": ""
+    "en": "Videos"
   },
   {
     "id": "footer-8",
@@ -373,7 +373,7 @@
     "label": "Button / link label",
     "kind": "text",
     "vi": "Gian hàng",
-    "en": ""
+    "en": "Herbal shop"
   },
   {
     "id": "footer-9",
@@ -405,7 +405,7 @@
     "label": "Button / link label",
     "kind": "text",
     "vi": "Liên hệ",
-    "en": ""
+    "en": "Contact"
   },
   {
     "id": "footer-13",
@@ -981,7 +981,7 @@
     "label": "Button / link label",
     "kind": "text",
     "vi": "Đăng ký tư vấn ↗",
-    "en": ""
+    "en": "Prepare for a visit"
   },
   {
     "id": "infodialog-3",
@@ -989,6 +989,6 @@
     "label": "Button / link label",
     "kind": "text",
     "vi": "Đóng",
-    "en": ""
+    "en": "Close"
   }
 ]

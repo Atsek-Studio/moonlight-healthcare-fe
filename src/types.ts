@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 export interface ContentFields {
   title?: string; description?: string; image?: string; alt?: string; tag?: string;
-  detail?: string; name?: string; quote?: string; note?: string; number?: string;
+  detailEn?: string; detail?: string; name?: string; quote?: string; note?: string; number?: string;
   icon?: string; titleEn?: string; descriptionEn?: string; value?: string;
   label?: string; labelEn?: string; price?: string; videoUrl?: string;
   orientation?: string; phone?: string; email?: string; zaloUrl?: string;

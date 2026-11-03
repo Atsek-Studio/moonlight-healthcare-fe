@@ -48,3 +48,22 @@
 @media(max-width:1000px){.clinic-contact-grid{gap:32px;grid-template-columns:repeat(2,minmax(0,1fr))}.clinic-detail-list>div{grid-template-columns:minmax(0,1fr);gap:5px}.clinic-map iframe{height:400px}.clinic-map-footer{flex-direction:column;gap:12px}}
 @media(max-width:600px){.clinic-contact-grid{grid-template-columns:minmax(0,1fr);gap:36px}.clinic-detail-list>div{grid-template-columns:105px minmax(0,1fr);gap:16px}.clinic-map iframe{height:320px}.clinic-map-heading,.clinic-map-footer{padding:20px}.clinic-description{font-size:var(--body)}}
 @media(max-width:360px){.clinic-detail-list>div{grid-template-columns:minmax(0,1fr);gap:4px}}
+
+/* Care choices stay next to their answers; the visit plan is useful without a backend. */
+.service-accordion{display:none}.service-detail .service-card{min-height:0;padding:40px}.service-detail .service-card .text-link{margin-top:32px;padding-top:0}
+.service-detail{align-self:stretch}.service-detail .service-card{height:100%;display:flex}.service-detail .service-card .text-link{margin-top:auto;padding-top:28px}
+.plan-actions{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}.plan-actions .btn{padding-inline:20px;flex:1}.visit-summary .visit-date{margin-top:12px;font-size:var(--small)}.visit-summary .plan-disclaimer{margin-top:20px;font-size:var(--small);color:var(--muted)}
+.copy-feedback{font-size:var(--small);margin-top:12px;min-height:0}.copy-feedback:empty{display:none}.visit-planner .manual-plan{height:240px}.visit-planner>.text-link{margin-top:16px}.clinic-detail-list dt{white-space:nowrap}
+/* Pictures settle, headings rise, itinerary entries travel horizontally: no repeated whole-block fade. */
+.about-visual.is-arriving,.post.is-arriving{animation:picture-settle 1s var(--ease-out) both}
+.step.is-arriving{animation:itinerary-arrive .6s var(--ease-out) both}
+.service-choices button.is-arriving{animation:choice-arrive .45s var(--ease-out) both}
+.pillar.is-arriving,.visit-planner.is-arriving,.clinic-map.is-arriving{animation:surface-arrive .8s var(--ease-out) both}
+@keyframes picture-settle{from{transform:scale(.975);opacity:.8}to{transform:scale(1);opacity:1}}
+@keyframes itinerary-arrive{from{transform:translateX(16px);opacity:.7}to{transform:translateX(0);opacity:1}}
+@keyframes choice-arrive{from{transform:translateX(-8px)}to{transform:translateX(0)}}
+@keyframes surface-arrive{from{opacity:.6}to{opacity:1}}
+@media(max-width:600px){.service-desktop{display:none}.service-accordion{display:grid;gap:8px}.service-accordion-item{background:var(--cream)}.service-accordion-item>button{display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;min-height:64px;text-align:left;padding:18px 20px;border:0;color:var(--ink);background:transparent;font-size:16px;font-weight:500}.service-accordion-item>button[aria-expanded=true]{color:var(--green)}.service-accordion-item>button>span:last-child{font-size:24px;font-weight:400}.service-accordion-item .service-card{background:var(--green);color:var(--light-ink);padding:24px;min-height:0}.service-accordion-item .service-card h3{font-size:28px}.service-accordion-item .service-card p,.service-accordion-item .text-link{color:var(--light-ink)}.service-accordion-item .service-explanation{font-size:var(--small)}.service-accordion-item .text-link{margin-top:20px;padding-top:0}.plan-actions{flex-direction:column}.plan-actions .btn{width:100%}}
+@media print{html{scroll-behavior:auto}body{background:var(--white)}.utility,.header,.footer,.mobile-bar,.skip-link,.booking-copy,main>section:not(#booking){display:none!important}.booking{padding:0;background:var(--white)}.booking-grid{display:block}.visit-planner{padding:0;background:var(--white)}.form-grid,.plan-actions,.availability-note,.form-help,.visit-planner>.text-link,.copy-feedback,.manual-plan{display:none!important}.visit-summary{background:var(--white);padding:0}.visit-planner h3{font-size:24px;margin-bottom:16px}.visit-planner,.visit-summary{animation:none!important;transform:none!important;opacity:1!important}}
+
+.plan-clinic{display:none}@media print{.plan-clinic{display:block;font-size:24px;font-family:var(--font-display);margin-bottom:16px}}

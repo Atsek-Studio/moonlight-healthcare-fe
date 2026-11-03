@@ -14,12 +14,12 @@ export function Contact() {
     <div className="section-top"><Translated as="h2" contentId="contact-2"/><p className="lead">{settings.note || <Translated en="Find the clinic, check our hours, and get in touch before your visit.">Tìm phòng khám, xem giờ làm việc và liên hệ trước khi đến thăm khám.</Translated>}</p></div>
     <div className="contact-grid clinic-contact-grid"><div className="contact-info clinic-details" data-edit-key="contactInfo" data-edit-id={settings.id}>
       <div><h3 className="contact-name"><ContentText id="brand-1"/></h3><p className="clinic-description"><ContentText id="footer-1"/></p></div>
-      {hasSamples && <p className="clinic-sample-note"><Translated en="Details marked “Sample” illustrate the layout and will be updated by the clinic.">Thông tin có nhãn “Mẫu” dùng để minh họa bố cục, sẽ được phòng khám cập nhật.</Translated></p>}
+      {hasSamples && <p className="clinic-sample-note"><Translated en="Sample details for this preview. The clinic will update them before appointments open.">Thông tin mẫu để xem bố cục. Phòng khám sẽ cập nhật trước khi nhận lịch.</Translated></p>}
       <dl className="clinic-detail-list">
-        <div><dt><Translated en="Address">Địa chỉ</Translated>{!selectedLocation?.address && <span className="sample-label"><Translated en="Sample">Mẫu</Translated></span>}</dt><dd>{selectedLocation?.address || '123 Đường Mẫu, TP. Hồ Chí Minh'}</dd></div>
-        <div><dt><Translated en="Opening hours">Giờ làm việc</Translated>{!hours && <span className="sample-label"><Translated en="Sample">Mẫu</Translated></span>}</dt><dd>{hours || <Translated en="Monday–Sunday · 07:30–19:00">Thứ 2 – Chủ nhật · 07:30 – 19:00</Translated>}</dd></div>
-        <div><dt><Translated en="Phone">Điện thoại</Translated>{!displayPhone && <span className="sample-label"><Translated en="Sample">Mẫu</Translated></span>}</dt><dd>{displayPhone ? <a href={phoneLink(displayPhone)}>{displayPhone}</a> : '028 xxxx xxxx'}</dd></div>
-        <div><dt>Email{!settings.email && <span className="sample-label"><Translated en="Sample">Mẫu</Translated></span>}</dt><dd>{settings.email ? <a href={`mailto:${settings.email}`}>{settings.email}</a> : 'hello@example.com'}</dd></div>
+        <div><dt><Translated en="Address">Địa chỉ</Translated></dt><dd>{selectedLocation?.address || <Translated en="123 Sample Street, Ho Chi Minh City">123 Đường Mẫu, TP. Hồ Chí Minh</Translated>}</dd></div>
+        <div><dt><Translated en="Opening hours">Giờ làm việc</Translated></dt><dd>{hours || <Translated en="Monday–Sunday · 07:30–19:00">Thứ 2 – Chủ nhật · 07:30 – 19:00</Translated>}</dd></div>
+        <div><dt><Translated en="Phone">Điện thoại</Translated></dt><dd>{displayPhone ? <a href={phoneLink(displayPhone)}>{displayPhone}</a> : '028 xxxx xxxx'}</dd></div>
+        <div><dt>Email</dt><dd>{settings.email ? <a href={`mailto:${settings.email}`}>{settings.email}</a> : 'hello@example.com'}</dd></div>
       </dl>
       <div className="clinic-contact-actions">{displayPhone && <a className="btn btn-primary" href={phoneLink(displayPhone)}><Translated en="Call the clinic">Gọi phòng khám</Translated></a>}{settings.zaloUrl && <a className="btn btn-outline" href={zaloHref} target="_blank" rel="noopener noreferrer"><Translated en="Chat on Zalo">Tư vấn qua Zalo</Translated><span aria-hidden="true">↗</span></a>}</div>
     </div><ClinicMap locations={locations} selectedLocation={selectedLocation} selectedId={mapBranch} onSelect={setMapBranch} mapUrl={mapUrl} directionsHref={directionsHref}/></div>

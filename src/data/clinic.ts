@@ -1,6 +1,9 @@
 // Illustrative content extracted from the supplied concept.
 export const serviceCards = [{
   "id": "service-card-1",
+  "titleEn": "Acupuncture",
+  "descriptionEn": "Traditional care methods assessed for your individual needs.",
+  "detailEn": "Your clinician explains suitability, contraindications and follow-up before proceeding.",
   "title": "Châm cứu & điện châm",
   "description": "Phương pháp hỗ trợ chăm sóc sức khỏe theo chỉ định chuyên môn.",
   "image": "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=750&q=80",
@@ -9,6 +12,9 @@ export const serviceCards = [{
   "detail": "Bác sĩ sẽ đánh giá tình trạng, giải thích chỉ định, chống chỉ định và kế hoạch theo dõi trước khi thực hiện."
 }, {
   "id": "service-card-2",
+  "titleEn": "Massage & acupressure",
+  "descriptionEn": "A consultation to understand your movement and care needs.",
+  "detailEn": "The approach and frequency are discussed individually after a clinical assessment.",
   "title": "Xoa bóp & bấm huyệt",
   "description": "Thăm khám và lựa chọn kỹ thuật phù hợp nhu cầu vận động.",
   "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=750&q=80",
@@ -17,6 +23,9 @@ export const serviceCards = [{
   "detail": "Liệu trình và tần suất được tư vấn dựa trên đánh giá chuyên môn, không áp dụng giống nhau cho tất cả người bệnh."
 }, {
   "id": "service-card-3",
+  "titleEn": "Cupping",
+  "descriptionEn": "A traditional method carried out by a qualified practitioner.",
+  "detailEn": "Relevant health factors need to be assessed before this method is considered.",
   "title": "Giác hơi",
   "description": "Phương pháp truyền thống cần được thực hiện bởi người có chuyên môn.",
   "image": "https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=750&q=80",
@@ -25,6 +34,9 @@ export const serviceCards = [{
   "detail": "Cần được sàng lọc các yếu tố sức khỏe liên quan trước khi thực hiện, theo hướng dẫn của người hành nghề có chuyên môn."
 }, {
   "id": "service-card-4",
+  "titleEn": "Moxibustion",
+  "descriptionEn": "A traditional warming method with a guided process.",
+  "detailEn": "Discuss the process, potential benefits and cases where it may not be appropriate at your consultation.",
   "title": "Cứu ấm",
   "description": "Liệu pháp nhiệt truyền thống với quy trình hướng dẫn an toàn.",
   "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=750&q=80",
@@ -33,6 +45,9 @@ export const serviceCards = [{
   "detail": "Thông tin về quy trình, lợi ích tiềm năng và các trường hợp không phù hợp sẽ được tư vấn khi thăm khám."
 }, {
   "id": "service-card-5",
+  "titleEn": "Herbal compress",
+  "descriptionEn": "A care method discussed with your clinician.",
+  "detailEn": "Ask about ingredients, temperature, duration and when this method should be avoided.",
   "title": "Chườm thảo dược",
   "description": "Hỗ trợ chăm sóc cơ thể theo khuyến nghị của nhân viên y tế.",
   "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=750&q=80",
@@ -41,6 +56,9 @@ export const serviceCards = [{
   "detail": "Bác sĩ tư vấn thành phần, nhiệt độ, thời gian và trường hợp cần tránh sử dụng."
 }, {
   "id": "service-card-6",
+  "titleEn": "Personal consultation",
+  "descriptionEn": "A conversation, an assessment and a plan built around you.",
+  "detailEn": "Meet a clinician to discuss your history, complete an assessment and explore suitable care.",
   "title": "Tư vấn sức khỏe toàn diện",
   "description": "Lắng nghe, đánh giá và xây dựng kế hoạch chăm sóc cá nhân.",
   "image": "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=750&q=80",
@@ -117,6 +135,8 @@ export const testimonialCards = [{
 }];
 export const articleCards = [{
   "id": "post-1",
+  "titleEn": "Everyday balance",
+  "descriptionEn": "Small changes can be a starting point for a steadier daily routine.",
   "title": "Một ngày cân bằng",
   "description": "Nếp sinh hoạt lành mạnh có thể bắt đầu từ những thay đổi rất đơn giản.",
   "image": "/images/journal-balance.jpg",
@@ -124,6 +144,8 @@ export const articleCards = [{
   "tag": "SỐNG KHỎE · 5 PHÚT"
 }, {
   "id": "post-2",
+  "titleEn": "Understanding herbs",
+  "descriptionEn": "Sourcing, use and interactions are useful topics to discuss.",
   "title": "Hiểu về thảo dược",
   "description": "Nguồn gốc, cách dùng và tương tác là những điều nên tìm hiểu.",
   "image": "/images/botanical-leaves.jpg",
@@ -131,6 +153,8 @@ export const articleCards = [{
   "tag": "DƯỢC LIỆU · 4 PHÚT"
 }, {
   "id": "post-3",
+  "titleEn": "Everyday movement",
+  "descriptionEn": "Note your activity habits and the questions you want to ask your clinician.",
   "title": "Thói quen vận động",
   "description": "Ghi lại thói quen vận động và những điều bạn muốn hỏi bác sĩ.",
   "image": "/images/journal-movement.jpg",
@@ -139,26 +163,36 @@ export const articleCards = [{
 }];
 export const processSteps = [{
   "id": "step-1",
+  "titleEn": "Arrange a visit",
+  "descriptionEn": "Discuss a convenient time and clinic.",
   "title": "Đặt lịch hẹn",
   "description": "Chọn thời gian và cơ sở thuận tiện.",
   "number": "01"
 }, {
   "id": "step-2",
+  "titleEn": "Meet your clinician",
+  "descriptionEn": "Your clinician listens and assesses your needs.",
   "title": "Thăm khám",
   "description": "Bác sĩ lắng nghe và đánh giá tình trạng.",
   "number": "02"
 }, {
   "id": "step-3",
+  "titleEn": "Discuss the plan",
+  "descriptionEn": "Review the proposed approach and expected costs.",
   "title": "Tư vấn phác đồ",
   "description": "Giải thích phương án và chi phí dự kiến.",
   "number": "03"
 }, {
   "id": "step-4",
+  "titleEn": "Begin your care",
+  "descriptionEn": "Proceed with an appropriate method when indicated.",
   "title": "Thực hiện điều trị",
   "description": "Áp dụng kỹ thuật khi có chỉ định phù hợp.",
   "number": "04"
 }, {
   "id": "step-5",
+  "titleEn": "Follow up",
+  "descriptionEn": "Discuss next steps and a follow-up visit if needed.",
   "title": "Theo dõi",
   "description": "Hướng dẫn chăm sóc và tái khám nếu cần.",
   "number": "05"

@@ -35,13 +35,13 @@ export const contentSections: ContentSection[] = [{
   label: 'Services',
   short: 'Services',
   description: 'Manage therapies and the information shown in service dialogs.',
-  fields: [title, description, tag, ...image, field('detail', 'Service details', 'textarea')]
+  fields: [title, field('titleEn','English title'), description, field('descriptionEn','English description','textarea'), tag, ...image, field('detail', 'Service details', 'textarea'), field('detailEn','English service details','textarea')]
 }, {
   key: 'doctorCards',
   label: 'Doctors',
   short: 'Doctors',
   description: 'Introduce your team with approved profiles and photographs.',
-  fields: [title, description, tag, ...image]
+  fields: [title, field('titleEn','English title'), description, field('descriptionEn','English description','textarea'), tag, ...image]
 }, {
   key: 'productCards',
   label: 'Products',
@@ -53,7 +53,7 @@ export const contentSections: ContentSection[] = [{
   label: 'Health articles',
   short: 'Articles',
   description: 'Edit article cards featured in the health journal.',
-  fields: [title, description, tag, ...image]
+  fields: [title, field('titleEn','English title'), description, field('descriptionEn','English description','textarea'), tag, ...image]
 }, {
   key: 'videoCards',
   label: 'Videos',
@@ -83,7 +83,7 @@ export const contentSections: ContentSection[] = [{
   label: 'Patient journey',
   short: 'Journey',
   description: 'Keep the steps of the clinic visit clear and up to date.',
-  fields: [field('number', 'Step number'), title, description]
+  fields: [field('number', 'Step number'), title, field('titleEn','English title'), description, field('descriptionEn','English description','textarea')]
 }, {
   key: 'carePillars',
   label: 'Care principles',
